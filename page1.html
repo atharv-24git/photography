@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Photos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff; /* White background for the whole page */
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FF6F61, #FFB74D, #4DB6AC, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center; /* Center the grid items */
+            align-items: start; /* Align items to the start of the container */
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            border: 2px solid #ddd; /* Light grey border */
+            border-radius: 8px; /* Rounded corners */
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05); /* Slightly zoom in on hover */
+        }
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .full-screen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .full-screen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hidden Photos</h1>
+    <div class="gallery" id="gallery">
+        <!-- Images will be loaded here -->
+    </div>
+    <div class="loading" id="loading">Loading more images...</div>
+
+    <div class="full-screen-overlay" id="fullScreenOverlay">
+        <img src="" alt="Full Screen Image" id="fullScreenImage">
+    </div>
+
+    <script>
+        let imageOffset = 0;
+        const gallery = document.getElementById('gallery');
+        const fullScreenOverlay = document.getElementById('fullScreenOverlay');
+        const fullScreenImage = document.getElementById('fullScreenImage');
+        const loading = document.getElementById('loading');
+
+        function generateImagePath(index) {
+            return `lockfolder1/your-image${index}.jpg`; // Updated path to use the lockfolder
+        }
+
+        function loadImages() {
+            loading.style.display = 'block';
+            setTimeout(() => {
+                const fragment = document.createDocumentFragment();
+                for (let i = imageOffset + 1; i <= imageOffset + 10; i++) { // Load 10 images at a time
+                    const container = document.createElement('div');
+                    container.className = 'image-container';
+                    const img = document.createElement('img');
+                    img.src = generateImagePath(i);
+                    img.alt = 'Gallery Image';
+                    img.dataset.index = i; // Store index to identify images
+                    img.addEventListener('click', () => showFullScreen(i));
+                    container.appendChild(img);
+                    
+                    fragment.appendChild(container);
+                }
+                gallery.appendChild(fragment);
+                loading.style.display = 'none';
+                imageOffset += 10;
+            }, 1000); // Simulate network delay
+        }
+
+        function showFullScreen(index) {
+            fullScreenImage.src = generateImagePath(index);
+            fullScreenOverlay.style.display = 'flex';
+        }
+
+        fullScreenOverlay.addEventListener('click', (event) => {
+            if (event.target !== fullScreenImage) {
+                fullScreenOverlay.style.display = 'none';
+            }
+        });
+
+        function handleScroll() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                loadImages();
+            }
+        }
+
+        // Load initial images
+        loadImages();
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
