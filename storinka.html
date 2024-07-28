@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ko-fi Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Seera&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+.header {
+    background: url('profile-pic/your-image2.jpg') no-repeat center center;
+    background-size: cover;
+    height: 140px;
+    width: 368px;
+    position: relative;
+    border: 4px solid white;
+    border-radius: 0 0 15px 15px; /* Top corners are 0, bottom corners are 15px */
+    box-sizing: border-box;
+    margin: -2px;
+}
+
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Make it a circle */
+    margin-right: 10px; /* Space between image and text */
+}
+.left {
+    display: flex; /* Align items horizontally if needed */
+    align-items: center; /* Center vertically */
+}
+
+.kofi-text {
+    font-weight: bold; /* Makes the text bold */
+    color: #FF4500; /* Example color, change as needed */
+    font-size: 22px; /* Adjust size as needed */
+    margin-left: -5px; /* Space between the image and the text */
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content {
+    padding: 15px 20px;
+    border: 1px solid white; /* changed from black to white */
+    border-radius: 35px;
+    position: absolute; /* or relative, fixed, sticky depending on your needs */
+    top: 7px; /* distance from the top of the containing element or viewport */
+    right: 50px; /* distance from the right of the containing element or viewport */
+    background-color: #5DB0FF; /* blue background */
+    color: white; /* white text color */
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right .line {
+    width: 5px;
+    height: 20px;
+    background-color: black;
+    margin-left: 5px;
+}
+
+
+
+
+
+.profile-pic {
+    position: absolute;
+    bottom: -62px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 10% 100%, 0 90%);
+    border: 5px solid white; /* Apply border to the whole element */
+}
+        .container {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .input-password {
+            width: calc(100% -  5px);
+            height: 50px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #b0b0b0;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            position: fixed; /* Fixed positioning */
+            left: 5px; /* Adjust as needed */
+            top: 20%; /* Adjust as needed */
+        }
+
+        .submit-btn {
+            width: calc(100% -  40px); /* Adjust to fit screen width if needed */
+            height: 50px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            position: fixed; /* Fixed positioning */
+            left: 20px; /* Align with input field */
+            top: calc(20% + 70px); /* Adjust to position below the input field */
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .username {
+            margin-top: 60px;
+            font-size: 22px; /* Slightly smaller font size */
+            font-weight:;
+            cursor: pointer;
+            font-family: 'Pacifico', cursive;
+        }
+        .bio {
+            font-size: 16px;
+            color: #555;
+            font-family: 'Seera', sans-serif;
+        }
+        .photos-horizontal {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px; /* Add space between sections */
+        }
+        .photos-horizontal .photos {
+            display: inline-flex;
+            overflow-x: auto;
+            padding: 10px 0;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+        .photos-horizontal img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .photos-infinite {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photos-infinite img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+            overflow: hidden;
+        }
+        .modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+        }
+        .modal-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 5px solid #FFFFFF;
+            cursor: zoom-in; /* Cursor for zooming */
+        }
+        .zoomed-in {
+            cursor: zoom-out; /* Change cursor for zoom out */
+            transform: scale(2); /* Zoom in */
+            transition: transform 0.3s ease;
+        }
+        .no-underline {
+            text-decoration: none;
+            font-size:18px; /* Slightly smaller font size */
+            font-weight:; 
+            color: #000000;
+            cursor: pointer;
+            font-family:serra;
+        }
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0; /* Always hidden */
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            transform: scale(1); /* Initial scale */
+            pointer-events: auto; /* Ensure the buttons are still clickable */
+        }
+
+        /* Show buttons on hover over the modal */
+        .modal-content:hover .nav-btn {
+            opacity: 1; /* Show buttons on hover */
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
+        }
+        .nav-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal.show .nav-btn {
+            opacity: 1; /* Show buttons when modal is active */
+        }
+        .no-scroll {
+            overflow: hidden;
+        }
+        
+        /* New styles for modal with white background */
+        .modal.show .modal-content {
+            background-color: white; /* Change background to white */
+        }
+
+        .modal.show .modal-image {
+            border: 5px solid white; /* Ensure border remains white */
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<header class="header1">
+<div class="left">
+    <img src="profile-pic/your-image1.jpg" alt="Profile Picture" class="profile-img" />
+    <span class="kofi-text">Ko-fi</span>
+</div>
+   
+        <div class="box">
+            <div class="box-content">Start Page</div>
+        </div>
+
+    <div class="right">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>
+
+
+
+    <div class="header">
+        <img src="profile-pic/your-image3.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="container">
+        <div class="username" id="username">Atharv Roy</div>
+        <div class="bio">
+            <a href="https://bit.ly/atharv-24" target="_blank" rel="noopener noreferrer" class="no-underline">bit.ly/atharv-24</a>
+        </div>
+        <!-- Horizontally Scrolling Photos -->
+        <div class="photos-horizontal">
+            <div class="photos" id="horizontalPhotoContainer">
+                <!-- Initial horizontal photos will be added here -->
+            </div>
+        </div>
+
+        <!-- Infinite Scrolling Photos -->
+        <div class="photos-infinite" id="infinitePhotoContainer">
+            <!-- Initial infinite photos will be added here -->
+        </div>
+    </div>
+
+    <!-- Modal for password prompt -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <p>Enter Password:</p>
+            <input type="password" id="passwordInput" class="input-password">
+            <button id="submitPassword" class="submit-btn">Enter</button>
+        </div>
+    </div>
+
+    <!-- Modal for displaying images -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage">
+            <div class="nav-container" id="navContainer">
+                <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+                <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Define password map for page redirection
+    const passwordMap = {
+        '896189':   'stranitsa.html',
+        '85095149': 'stranitsa-dva.html',
+        '80169387': 'stranitsa-tri.html',
+        '99328226': 'stranitsa-chetyre.html' };
+
+    // Get DOM elements
+    const usernameElement = document.getElementById('username');
+    const passwordModal = document.getElementById('passwordModal');
+    const submitPassword = document.getElementById('submitPassword');
+    const passwordInput = document.getElementById('passwordInput');
+    const horizontalPhotoContainer = document.getElementById('horizontalPhotoContainer');
+    const infinitePhotoContainer = document.getElementById('infinitePhotoContainer');
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let horizontalPhotoIndex = 1;
+    let horizontalPhotos = [];
+    let infinitePhotoIndex = 1;
+    let infinitePhotos = [];
+    let currentImageIndex = -1; // Initialize with -1 to indicate no image selected
+    let hideTimeout;
+
+    // Show password modal on username click
+    usernameElement.addEventListener('click', () => {
+        passwordModal.style.display = 'block';
+    });
+
+    // Handle password submission
+    submitPassword.addEventListener('click', () => {
+        const password = passwordInput.value;
+        if (passwordMap[password]) {
+            window.location.href = passwordMap[password];
+        } else {
+            alert('Incorrect password. Please try again.');
+        }
+    });
+
+    // Load more horizontal photos
+    async function loadMoreHorizontalPhotos() {
+        for (let i = 0; i < 4; i++) {
+            const imgURL = `photosh/your-image${horizontalPhotoIndex}.jpg`;
+            try {
+                const response = await fetch(imgURL);
+                if (response.ok) {
+                    const img = document.createElement('img');
+                    img.src = imgURL;
+                    img.alt = `Photo ${horizontalPhotoIndex}`;
+                    horizontalPhotoContainer.appendChild(img);
+                    horizontalPhotos.push(imgURL);
+                    img.addEventListener('click', () => openImageModal(img.src));
+                } else {
+                    console.log(`Image not found: ${imgURL}`);
+                }
+            } catch (error) {
+                console.error(`Error fetching image: ${imgURL}`, error);
+            }
+            horizontalPhotoIndex++;
+        }
+    }
+
+    // Load more infinite scroll photos
+    async function loadMoreInfinitePhotos() {
+        for (let i = 0; i < 4; i++) {
+            const imgURL = `photosp/your-image${infinitePhotoIndex}.jpg`;
+            try {
+                const response = await fetch(imgURL);
+                if (response.ok) {
+                    const img = document.createElement('img');
+                    img.src = imgURL;
+                    img.alt = `Photo ${infinitePhotoIndex}`;
+                    infinitePhotoContainer.appendChild(img);
+                    infinitePhotos.push(imgURL);
+                    img.addEventListener('click', () => openImageModal(img.src));
+                } else {
+                    console.log(`Image not found: ${imgURL}`);
+                }
+            } catch (error) {
+                console.error(`Error fetching image: ${imgURL}`, error);
+            }
+            infinitePhotoIndex++;
+        }
+    }
+
+    // Infinite scroll event listener
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            loadMoreInfinitePhotos();
+        }
+    });
+
+    // Initial photo loads
+    loadMoreHorizontalPhotos();
+    loadMoreInfinitePhotos();
+
+    // Open image modal
+    function openImageModal(src) {
+        currentImageIndex = infinitePhotos.indexOf(src);
+        if (currentImageIndex === -1) {
+            currentImageIndex = horizontalPhotos.indexOf(src) + infinitePhotos.length;
+        }
+        if (currentImageIndex >= 0) {
+            modalImage.src = src;
+            imageModal.style.display = 'block';
+            document.body.classList.add('no-scroll');
+            imageModal.classList.add('show'); // Add show class to modal
+            resetHideTimeout();
+        } else {
+            console.error('Image not found in arrays');
+        }
+    }
+
+    // Change image in modal
+    function changeImage(offset) {
+        if (currentImageIndex !== -1) {
+            const totalPhotos = infinitePhotos.length + horizontalPhotos.length;
+            currentImageIndex = (currentImageIndex + offset + totalPhotos) % totalPhotos;
+            if (currentImageIndex < infinitePhotos.length) {
+                modalImage.src = infinitePhotos[currentImageIndex];
+            } else {
+                modalImage.src = horizontalPhotos[currentImageIndex - infinitePhotos.length];
+            }
+            resetHideTimeout();
+        }
+    }
+
+    // Reset hide timeout
+    function resetHideTimeout() {
+        clearTimeout(hideTimeout);
+        prevBtn.style.opacity = 1;
+        nextBtn.style.opacity = 1;
+        hideTimeout = setTimeout(() => {
+            prevBtn.style.opacity = 0;
+            nextBtn.style.opacity = 0;
+        }, 1500);
+    }
+
+    // Event listeners for image navigation
+    prevBtn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent modal close on button click
+        changeImage(-1);
+    });
+    nextBtn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent modal close on button click
+        changeImage(1);
+    });
+
+    // Zoom functionality for the modal image
+    modalImage.addEventListener('click', (event) => {
+        if (modalImage.classList.contains('zoomed-in')) {
+            modalImage.classList.remove('zoomed-in');
+            imageModal.classList.remove('show'); // Remove show class when zoomed out
+        } else {
+            modalImage.classList.add('zoomed-in');
+            imageModal.classList.add('show'); // Add show class when zoomed in
+        }
+    });
+
+    // Close modal on click outside the image
+    imageModal.addEventListener('click', (event) => {
+        if (event.target !== modalImage && !modalImage.classList.contains('zoomed-in')) {
+            imageModal.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+            imageModal.classList.remove('show'); // Ensure show class is removed when modal is closed
+        }
+    });
+
+    // Show buttons on mouse move
+    imageModal.addEventListener('mousemove', resetHideTimeout);
+</script>
+ 
+</body>
+</html>
