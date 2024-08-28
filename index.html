@@ -788,6 +788,55 @@ nav a:hover {
 
 
 
+    .card-content h3 {
+        font-family: Arial, sans-serif; /* Simple font style for headings */
+        font-weight: bold; /* Optionally, make the heading bold */
+        color: #000; /* Black color for headings, adjust as needed */
+    }
+
+    .card-content p {
+        font-family: Arial, sans-serif; /* Simple font style for paragraph text */
+        font-weight: normal; /* Regular weight for the paragraph text */
+        color: #333; /* Dark gray color for readability, adjust as needed */
+    }
+
+
+
+/* Import a premium font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); /* Example: Montserrat */
+
+/* Apply premium styling */
+.click-here {
+    font-family: 'Montserrat', sans-serif; /* Elegant sans-serif font */
+    font-weight: 600; /* Semi-bold text */
+    color: #3a3a3a; /* Dark gray color for text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1em; /* Slightly larger text size */
+    position: relative; /* Position relative for pseudo-element */
+    padding: 0.2em; /* Add some padding */
+    border-radius: 4px; /* Rounded corners */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+.click-here::after {
+    content: '✧'; /* Decorative star */
+    position: absolute; /* Absolute positioning */
+    right: 0px; /* Position it to the right of the text */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 1em; /* Larger size for the star */
+    color: #ff007f; /* Pink color for the star */
+    transition: color 0.3s ease; /* Smooth transition for star color */
+}
+
+.click-here:hover {
+    color: #007bff; /* Premium blue color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.click-here:hover::after {
+    color: #ff007f; /* Change star color on hover */
+}
 
 </style>
 <body>
@@ -1033,6 +1082,45 @@ nav a:hover {
 
 
 
+
+
+<!-- Discussion links -->
+<div class="card">
+    <h3 onclick="toggleContent(this)">Discussion Links</h3>
+    <p class="more-content" style="display: block;">
+        <a href="#" class="link" data-section="discussion-telegram" onclick="toggleContent(event, 'discussion-telegram')">Telegram</a> | 
+        <a href="#" class="link" data-section="discussion-instagram" onclick="toggleContent(event, 'discussion-instagram')">Instagram</a> | 
+        <a href="#" class="link" data-section="discussion-whatothers" onclick="toggleContent(event, 'discussion-whatothers')">Others</a>
+    </p>
+</div>
+<div id="discussion-telegram" class="content-section" style="display: none;">
+    <div class="card-content">
+        <h3>Project Management</h3>
+<p class="contact-item click-here" onclick="handlePassword('telegram-group')">Telegram Profile: Click Here ✨</p>
+        <h3>Planning Techniques</h3>
+<p class="contact-item click-here" onclick="handlePassword('telegram-channel')">Telegram Channels: Click Here ✨</p>
+   </div>
+</div>
+
+<div id="discussion-instagram" class="content-section" style="display: none;">
+    <div class="card-content">
+        <h3>Personal</h3>
+<p class="contact-item click-here" onclick="handlePassword('instagram-personal')">Instagram Personal: Click Here ✨</p>
+        <h3> Public </h3>
+<p class="contact-item click-here" onclick="handlePassword('instagram-public')">Instagram Public: Click Here ✨</p>
+    </div>
+</div>
+
+<div id="discussion-whatothers" class="content-section" style="display: none;">
+    <div class="card-content">
+        <h3>Work-Life Balance</h3>
+        <p>Discuss strategies for balancing work and rest in technology careers.</p>
+    </div>
+    <div class="card-content">
+        <h3>Recovery Techniques</h3>
+        <p>Techniques for effective rest and recovery in tech work environments.</p>
+    </div>
+</div>
 
 
 
@@ -1305,6 +1393,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+
+    // Define passwords and URLs for each item
+    const passwords = {
+        'telegram-group':     '26042012',
+        'telegram-channel':   '8509515',
+        'instagram-personal': '05052006',
+        'instagram-public':   '8509515'
+    };
+
+    const urls = {
+        'telegram-group': 'https://t.me/Atharv_siddhu',
+        'telegram-channel': 'https://t.me/Atharv_siddhu',
+        'instagram-personal': 'https://www.instagram.com/___atharv_ava_',
+        'instagram-public': 'https://www.instagram.com/___atharv_ava_'
+    };
+
+    // Function to handle password and redirect
+    function handlePassword(item) {
+        const password = prompt("Enter the password:");
+        if (password === passwords[item]) {
+            window.open(urls[item], '_blank');
+        } else {
+            alert("Incorrect password.");
+        }
+    }
+
+    // Function to toggle content visibility
+    function toggleContent(event, sectionId) {
+        event.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section.style.display === "block") {
+            section.style.display = "none";
+        } else {
+            section.style.display = "block";
+        }
+    }
 
 </script>
     <script src="script-main.js"></script>
