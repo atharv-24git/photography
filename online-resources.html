@@ -18,32 +18,45 @@ body {
 }
 
 header {
-    background: #6c63ff;
-    color: white;
+    color: #333; /* Dark text color for contrast */
+    line-height: 1.6; /* Improved readability */
+    margin: 0; /* Removes default margin */
+    font-family: 'Arial', sans-serif; /* Simple, elegant font */
+    background: linear-gradient(135deg, #ffffff, #ffffff, #e0eaff); /* Multi-color gradient for a premium look */
+    border-left: 4px solid transparent; /* Elegant border color */
+    border-bottom: 0px solid linear-gradient(135deg, #ffffff, #e0eaff, #e0eaff); /* Placeholder for gradient effect */
     padding: 10px 20px;
     text-align: center;
+    border-radius: 8px; /* Rounded corners for a refined appearance */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for interactive effects */
+    background-clip: border-box; /* Ensures the gradient covers the background area */
 }
 
 nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    color: #333; /* Dark text color for contrast */
+    text-decoration: none; /* No underline by default */
+    margin: 0 15px; /* Space between links */
+    font-weight: bold; /* Emphasized font weight */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ff00fc; /* Change text color on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
 }
 
-/* Premium Styling for Library Section */
+/* Enhanced Styling for Section with Hidden Top Border */
 .section {
-    background: #FFFFFF; /* Soft gradient background */
-    padding: 15px;
-    border-radius: 12px;
-    border: 2px solid #8e44ad; /* Deep purple border */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin: 15px;
+    background: #FFFFFF; /* White background */
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 12px; /* Rounded corners */
+    border: 2px solid transparent; /* Transparent border to keep the space */
+    border-bottom-color: #8e44ad; /* Deep purple border on the bottom */
+    margin: 0px auto; /* Centers the section with vertical and horizontal margin */
+    max-width: 90%; /* Limits the width to 90% of the viewport */
     font-family: 'Arial', sans-serif;
+    width: calc(100% - 40px); /* Ensures full width with padding */
 }
 
 .section h2 {
@@ -59,52 +72,67 @@ nav a:hover {
 }
 
 .card {
+    border-left: 5px solid #ffccf0; 
+    border-right: 5px solid transparent; /* No border color on the right */
     background: white;
-    padding: 20px; /* Reduced padding for a more compact card */
+    padding: 10px; /* Ensure padding is uniform */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
 }
 
+/* Remove right border color on hover */
 .card:hover {
+    border-left-color: #ffccfc; /* Example of Unick highlight premium color */
+    border-right-color: transparent; /* Ensure right border remains transparent */
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-left-color: red; /* Change border color on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-
 /* Card Heading Styling */
 .section .card h3 {
-    font-size: 1.6em; /* Slightly smaller heading */
+    font-family: 'Pacifico', cursive; /* Pacifico font */
     color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 2.6em; /* Slightly smaller heading */
+    margin-bottom: 0px;
+    margin-top: -10px; /* Moves the heading slightly upward */
     font-weight: 600;
-    font-family: 'Serra', sans-serif; /* Serra font by default */
 }
 
 .card p {
     font-size: 1em; /* Adjusted text size for better readability */
-    color: #555;
-    line-height: 1.5;
+    color: #333;
+    line-height: 1.6;
     margin: 0;
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9, #e0eaff); /* Multi-color gradient for a premium look */
+    border-left: 4px solid #ffccfc; /* Elegant border color */
+    padding: 15px; /* Added padding for better readability */
+    border-radius: 8px; /* Rounded corners for a premium look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.card p:hover {
+    background: linear-gradient(135deg, #f8f8f8, #ffffff, #d9cde1); /* Lighter gradient on hover */
+    border-left-color: #b984b5; /* Darker border color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    color: #333; /* Darker text color on hover */
+    border-left: 3px solid #ffccfc;
+}
+
+
 
 /* Highlighted text and sections */
 .card h3 {
-    color: #6c63ff; /* Highlight heading with a premium color */
+        white-space: nowrap; /* Prevents text from wrapping */
+        overflow: hidden; /* Hides overflowed text */
+        text-overflow: ellipsis; /* Adds an ellipsis (...) for overflowed text */
+        font-size: 1.2em; /* Adjust font size as needed */
+        font-weight: bold; /* Make the text bold if desired */
+        color: #6c63ff; /* Highlight heading with a premium color */
 }
-
-.card p {
-    background: #f0f4f7; /* Light background for text */
-    border-left: 3px solid #6c63ff; /* Add colored left border for text */
-    padding: 10px; /* Add padding for better readability */
-    border-radius: 4px; /* Rounded corners for a soft look */
-}
-
-
-
         /* Additional CSS for Read More functionality */
         .more-content {
             display: none;
@@ -147,6 +175,11 @@ nav a:hover {
         }
     
 
+
+
+
+
+
 </style>
 <body>
     <header>
@@ -159,24 +192,35 @@ nav a:hover {
     </header>
 
     <main>
-        <section id="online-resources" class="section">
 
-            <div class="card" onclick="toggleContent(this)">
-                <h3>Resource Topic</h3>
-                <p>Description of Resource 1. Add more details about the resource here.</p>
-                <div class="more-content">
-                    <p>Full details about Resource Title 1. This content will be shown when "Read More" is clicked.</p>
-                </div>
-            </div>
-            <div class="card" onclick="toggleContent(this)">
-                <h3>Resource Subtopic</h3>
-                <p>Description of Resource 2. Add more details about the resource here.</p>
-                <div class="more-content">
-                    <p>Full details about Resource Title 2. This content will be shown when "Read More" is clicked.</p>
-                </div>
-            </div>
-            <!-- Add more online resources as needed -->
-        </section>
+
+<section id="online-resources" class="section">
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>AI and Machine Learning</h3>
+        <p>Explore cutting-edge advancements in artificial intelligence and machine learning. Discover how AI is revolutionizing industries and shaping the future of technology. 🌟🧩</p>
+        <div class="more-content">
+            <p>Dive deep into the latest AI research, algorithms, and practical applications. From neural networks to natural language processing, this resource covers it all with a focus on the most recent innovations and their implications for various sectors.</p>
+        </div>
+    </div>
+    
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Advanced Robotics</h3>
+        <p>Uncover the fascinating world of advanced robotics and automation. Learn about the latest breakthroughs in robot design, functionality, and their impact on various industries. 🚀🌿</p>
+        <div class="more-content">
+            <p>Explore robotic systems, from autonomous vehicles to industrial robots, and understand their roles in enhancing efficiency, safety, and innovation. This resource provides insights into the future trends and current advancements in robotics technology.</p>
+        </div>
+    </div>
+  <div class="card" onclick="toggleContent(this)">
+    <h3>Quantum Computing Developments</h3>
+    <p>Explore the latest advancements in quantum computing, focusing on quantum algorithms, qubit technologies, and their implications for cryptography and complex problem-solving. 🌍🔬</p>
+    <div class="more-content">
+        <p>Dive into cutting-edge research on quantum algorithms, including Shor's and Grover's algorithms, and their potential to revolutionize fields such as cryptography and optimization. Learn about current challenges in qubit stability and coherence, as well as breakthroughs in quantum error correction and quantum communication. 🌱💡</p>
+    </div>
+</div>  
+    <!-- Add more online resources as needed -->
+
+</section>
     </main>
 
 <script>
