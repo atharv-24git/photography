@@ -5,196 +5,328 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Papers</title>
     <link rel="stylesheet" href="styles-bor.css"> <!-- Link to your CSS file -->
-</head>
-
-<style>
-
-/* General Styling for All Pages */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #FFFFFF;
-}
-
-header {
-    background: #6c63ff;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Premium Styling for Library Section */
-.section {
-    background: #FFFFFF; /* Soft gradient background */
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    font-family: 'Arial', sans-serif;
-}
-
-.section h2 {
-    font-size: 2.2em; /* Slightly smaller header */
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px; /* Add spacing for a premium look */
-    border-bottom: 3px solid #6c63ff; /* Underline header with a bold color */
-    padding-bottom: 10px;
-}
-
-.card {
-    background: white;
-    padding: 20px; /* Reduced padding for a more compact card */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-left-color: #5a5a5a; /* Change border color on hover */
-}
-
-.card h3 {
-    font-size: 1.6em; /* Slightly smaller heading */
-    color: #2c3e50;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-family: 'Pacifico', cursive; /* Beautiful font */
-}
-
-.card p {
-    font-size: 1em; /* Adjusted text size for better readability */
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Highlighted text and sections */
-.card h3 {
-    color: #6c63ff; /* Highlight heading with a premium color */
-}
-
-.card p {
-    background: #f0f4f7; /* Light background for text */
-    border-left: 3px solid #6c63ff; /* Add colored left border for text */
-    padding: 10px; /* Add padding for better readability */
-    border-radius: 4px; /* Rounded corners for a soft look */
-}
-
-
-
-        /* Additional CSS for Read More functionality */
-        .more-content {
-            display: none;
-            margin-top: 10px;
+    <style>
+        /* General Styling for All Pages */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #FFFFFF;
         }
 
-        .read-more {
-            color: #6c63ff;
-            cursor: pointer;
+        /* Header Styling */
+        header {
+            background: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
             font-weight: bold;
         }
 
-        .read-more:hover {
+        nav a:hover {
             text-decoration: underline;
         }
 
-        .read-less {
-            display: none; /* Initially hidden */
-            color: #6c63ff;
-            cursor: pointer;
-            font-weight: bold;
+        /* Section and Header Styling */
+        .section h2 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 0px solid #6c63ff;
+            padding-bottom: 0px;
         }
 
-        .read-less:hover {
-            text-decoration: underline;
-        }
-     
-        /* Additional CSS for Read More functionality */
-        .more-content {
-            display: none;
-            margin-top: 15px;
-        }
-
+        /* Card Styling */
         .card {
+            border-left: 5px solid #ffccf0;
+            border-right: 5px solid transparent;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            box-sizing: border-box;
         }
 
         .card:hover {
-            background-color: #ffffff; /* Optional: for hover effect */
+            border-left-color: #ffccfc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
-    
 
+        /* Card Content Styling */
+        .card p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff, #f9f9f9, #e0eaff);
+            border-left: 4px solid #ffccfc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
 
+        .card p:hover {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff, #d9cde1);
+            border-left-color: #b984b5;
+            color: #333;
+        }
 
-</style>
-<body>
-    <header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="book-collection.html">E-Book</a> 
-    <a href="index-second.html">CR-lection</a>
-    <a href="i-lear.html">PR-Per</a> <!-- Corrected line -->
-    <a href="research-papers.html">R-search</a>
-    <a href="online-resources.html">Online Resources</a>
-</nav>
-    </header>
+        /* Read More Functionality */
+        .more-content {
+            display: none;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
 
-    <main>
-        <section id="research-papers" class="section">
-            <h2>Research Papers</h2>
-            <div class="card" onclick="toggleContent(this)">
-                <h3>Research Paper Title 1</h3>
-                <p>Description of Research Paper 1. Add more details about the paper here.</p>
-                <div class="more-content">
-                    <p>Full details about Research Paper Title 1. This content will be shown when "Read More" is clicked.</p>
-                </div>
-            </div>
-            <div class="card" onclick="toggleContent(this)">
-                <h3>Research Paper Title 2</h3>
-                <p>Description of Research Paper 2. Add more details about the paper here.</p>
-                <div class="more-content">
-                    <p>Full details about Research Paper Title 2. This content will be shown when "Read More" is clicked.</p>
-                </div>
-            </div>
-            <!-- Add more research papers as needed -->
-        </section>
-    </main>
+        .read-more, .read-less {
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
+        .read-more:hover, .read-less:hover {
+            text-decoration: underline;
+        }
 
-
-
-<script>
-        function toggleContent(card) {
-            const moreContent = card.querySelector('.more-content');
-
-            if (moreContent.style.display === "block") {
-                moreContent.style.display = "none";
-            } else {
-                moreContent.style.display = "block";
+        /* Animation for Falling Flowers and Petals */
+        @keyframes fallFlowers {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(100%);
             }
         }
-    
+
+        @keyframes flower1 {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100%) rotate(360deg);
+            }
+        }
+
+        @keyframes flower2 {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100%) rotate(-360deg);
+            }
+        }
+
+        .supercharge {
+            position: relative;
+            background-color: #ffccfc; /* Light background for visual effect */
+            overflow: hidden;
+        }
+
+        .supercharge::before,
+        .supercharge::after {
+            content: "🍁";
+            position: absolute;
+            font-size: 2em;
+            animation: fallFlowers 10s linear infinite;
+        }
+
+        .supercharge .flower1 {
+            content: "🌷";
+            top: -10%;
+            left: 10%;
+            animation: flower1 8s linear infinite;
+        }
+
+        .supercharge .flower2 {
+            content: "🌹";
+            top: -20%;
+            right: 20%;
+            animation: flower2 12s linear infinite;
+        }
+
+        .supercharge .flower3 {
+            content: "🌼";
+            top: -30%;
+            left: 30%;
+            animation: flower1 15s linear infinite;
+        }
+
+        /* Add more flower styles as needed */
+        .supercharge .flower4 {
+            content: "🌸";
+            top: -40%;
+            right: 40%;
+            animation: flower2 20s linear infinite;
+        }
+
+        /* Highlighted Text */
+        .highlight {
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        /* Text with Border */
+        .bordered {
+            border: 2px solid #007bff;
+            padding: 2px 6px;
+            border-radius: 20px;
+            background: #f1f8ff;
+            color: #007bff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+        }
+
+        /* Bold Text */
+        .bold {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Bullet List */
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 5px;
+        }
+
+        /* Media Queries for Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .section h2 {
+                font-size: 1.8em;
+            }
+            .card {
+                padding: 8px;
+                margin-bottom: 15px;
+            }
+            .card p {
+                font-size: 0.9em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<body id="main-content" style="display:none;">
+    <!-- Your page content goes here --> 
+       </body>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="book-collection.html">E-Book</a> 
+        <a href="index-second.html">CR-lection</a>
+        <a href="i-lear.html">PR-Per</a> 
+        <a href="research-papers.html">R-search</a>
+        <a href="online-resources.html">Online Resources</a>
+    </nav>
+</header>
+
+<!-- Existing cards -->
+<div class="card" onclick="toggleContent(this)">
+    <h3>Book Collection</h3>
+    <p>
+        Embark on an <span class="highlight">extraordinary journey</span> through our <span class="bold">unlimited library</span>, where every book blooms like a garden of knowledge. Perfect for
+        <span class="highlight">deep intellectual adventures</span> or <span class="bold">transformative leisure reading</span>.
+    </p>
+    <div class="more-content">
+        <p>🌸 Explore the petals of quantum algorithms, qubits, and entanglement, each unfolding a new dimension of what's possible in computing. Delve into the fragrant secrets of key breakthroughs, theoretical advancements, and their potential impact across industries from cryptography to pharmaceuticals.</p>
+    </div>
+</div>
+
+<div class="card" onclick="toggleContent(this)">
+    <h3>Research Papers</h3>
+    <p>
+        Explore a <span class="bold">frontline archive</span> of groundbreaking research and transformative studies. Each page turns like a leaf, revealing <span class="highlight">scientific revelations</span> and <span class="bold">innovative theories</span> shaping the future.
+    </p>
+    <div class="more-content">
+        <p>🌺 Dive into the blossoming fields of AI in healthcare—where technology is blooming into new capabilities, from diagnosing diseases to predicting health trends. Learn how these advancements are revolutionizing medical practice and explore their ethical implications. Begin your exploration into AI’s ability to transform lives here.</p>
+    </div>
+</div>
+
+<div class="card" onclick="toggleContent(this)">
+    <h3>Online Resources</h3>
+    <p>
+        Unearth <span class="highlight">exceptional digital treasures</span>, from groundbreaking e-books and <span class="bold">scholarly journals</span> to 
+<span class="bold">advanced educational platforms</span> that will elevate your intellectual exploration like a field of wildflowers.
+    </p>
+    <div class="more-content">
+        <p>🌼 Discover how digital learning is like a garden of infinite resources. Explore the vibrant colors of scholarly research and innovative platforms designed to cultivate your curiosity and intellectual growth. Let each digital petal guide you to deeper understanding and wisdom.</p>
+    </div>
+</div>
+
+<!-- New cards -->
+<section id="research-papers" class="section">
+    <div class="card" onclick="toggleContent(this)">
+        <h3><span class="bold">Redefining Limits</span></h3>
+        <p>🔍 Curious about the future of computation? This research is like a rare orchid in the digital garden—an intricate exploration of quantum computing's revolutionary landscape. Click to unveil the hidden dimensions of this groundbreaking technology!</p>
+        <div class="more-content">
+            <p>🌷 Discover the mysteries of quantum algorithms, qubits, and entanglement, where each concept unfolds like a rare flower in the field of computing. Explore breakthroughs and theoretical advancements, and see their potential to blossom in industries from cryptography to pharmaceuticals.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>AI Revolutionizes Healthcare</h3>
+        <p>🔍 Fascinated by the power of AI? This paper is a bloom of innovation, examining how artificial intelligence is reshaping healthcare. Ready to uncover the future of medicine?</p>
+        <div class="more-content">
+            <p>🌻 Dive deeper into AI’s role in detecting diseases, personalizing treatments, and predicting health trends. Experience how these technologies are growing like a garden of possibilities, with each discovery offering new petals of understanding and opportunities to transform healthcare.</p>
+        </div>
+    </div>
+
+    <!-- Add more research papers as needed -->
+</section>
+
+<script>
+    function toggleContent(card) {
+        const moreContent = card.querySelector('.more-content');
+        const superchargeClass = 'supercharge';
+
+        if (moreContent.style.display === "block") {
+            moreContent.style.display = "none";
+            moreContent.classList.remove(superchargeClass);
+        } else {
+            moreContent.style.display = "block";
+            moreContent.classList.add(superchargeClass);
+        }
+    }
+
+          
+document.addEventListener("DOMContentLoaded", function() {
+    const password = "05052006"; // Your predefined password
+    let userInput = prompt("Please enter the password to access the page:");
+
+    if (userInput === password) {
+        document.getElementById("main-content").style.display = "block";
+    } else {
+        alert("Incorrect password. Access denied.");
+        window.location.href = "about:blank"; // Redirects to a blank page or you can change to any page.
+    }
+});
+
+
+
 </script>
 <script src="script-bor.js"></script>
 </body>
