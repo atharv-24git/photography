@@ -236,18 +236,54 @@ nav a:hover {
                 moreContent.style.display = "block";
             }
         }
-    
-document.addEventListener("DOMContentLoaded", function() {
-    const password = "05052006"; // Your predefined password
-    let userInput = prompt("Please enter the password to access the page:");
+          
 
-    if (userInput === password) {
-        document.getElementById("main-content").style.display = "block";
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const correctPassword = "552006"; // Correct password for access
+    const mainContent = document.getElementById("main-content");
+
+    function verifyPasswordAndRedirect(event, element) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        var password = prompt("Enter the password:");
+        if (password === correctPassword) {
+            // Redirect to the new page
+            window.location.href = element.href;
+        } else {
+            alert("Incorrect password. Access denied.");
+        }
+    }
+
+    function toggleContent() {
+        // Toggle visibility of content
+        const content = document.getElementById('content');
+        content.style.display = (content.style.display === "none") ? "block" : "none";
+    }
+
+    // Prompt for password and show/hide content accordingly
+    let userInput = prompt("Please enter the password to access the page:");
+    if (userInput === correctPassword) {
+        mainContent.style.display = "block";
     } else {
         alert("Incorrect password. Access denied.");
-        window.location.href = "about:blank"; // Redirects to a blank page or you can change to any page.
+        // Redirect to the previous page or a specific page
+        window.history.back(); // Go back to the previous page
+        // window.location.href = "index.html"; // Redirect to a specific page
     }
 });
+
+
+
+
+
 </script>
 </body>
 </html>

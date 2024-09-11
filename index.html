@@ -230,13 +230,17 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 
         }
 
-        .card h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #4a4a4a;
-            cursor: pointer;
-            font-size: 1em;
-        }
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    font-size: 1em;
+}
+
+.card h3 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from h3 */
+}
 
         .card p {
             margin: 0;
@@ -858,6 +862,12 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 }
 
 
+        /* Style for content toggle example */
+        .hidden-content {
+            display: none;
+        }
+
+
 
 </style>
 <body>
@@ -964,10 +974,25 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 
 
 
+
+ 
+
+   
+
+
+
+
+
+
+
+
+
+
+
 <!-- All Contents Section -->
 <!-- All Contents Section -->
 <div class="card">
-    <h3 onclick="toggleContent(this)">All Contents</h3>
+    <h3><a onclick="toggleContent(this)">All Contents</a></h3>
     <p class="more-content" style="display: block;">
         <a href="#" class="link" data-section="Nestures">Nestures</a> | 
         <a href="#" class="link" data-section="exercises">Exercises</a> | 
@@ -1115,7 +1140,7 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 
 <!-- Discussion links -->
 <div class="card">
-    <h3 onclick="toggleContent(this)">Discussion Links</h3>
+    <h3><a href="new-page_dl.html" onclick="verifyPasswordAndRedirect(event, this); toggleContent(this);">Discussion</a></h3>
     <p class="more-content" style="display: block;">
         <a href="#" class="link" data-section="discussion-telegram" onclick="toggleContent(event, 'discussion-telegram')">Telegram</a> | 
         <a href="#" class="link" data-section="discussion-instagram" onclick="toggleContent(event, 'discussion-instagram')">Instagram</a> | 
@@ -1494,7 +1519,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-</script>
+
+
+
+
+    
+        function verifyPasswordAndRedirect(event, element) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            var password = prompt("Enter the password:");
+            var correctPassword = "552006"; // Replace with your correct password
+            
+            if (password === correctPassword) {
+                // Redirect to the new page
+                window.location.href = element.href;
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+
+        function toggleContent(element) {
+            // Example function to toggle content
+            var content = document.getElementById('content');
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
     <script src="script-main.js"></script>
 
 </body>
