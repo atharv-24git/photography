@@ -878,7 +878,8 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
     <a href="index-second.html">CR-lection</a>
     <a href="i-lear.html">PR-Per</a> <!-- Corrected line -->
     <a href="research-papers.html">R-search</a>
-    <a href="online-resources.html">Online Resources</a>
+    <a href="online-resources.html" onclick="verifyPasswordAndRedirect(event, this); toggleContent(this);">Online Resources</a>
+
 </nav>
     </header>
 
@@ -1140,7 +1141,7 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 
 <!-- Discussion links -->
 <div class="card">
-    <h3><a href="new-page_dl.html" onclick="verifyPasswordAndRedirect(event, this); toggleContent(this);">Discussion</a></h3>
+    <h3><a href="new-page_dl.html" onclick="verifyPasswordAndRedirect(event, this); toggleContent(this);">Discussion Links</a></h3>
     <p class="more-content" style="display: block;">
         <a href="#" class="link" data-section="discussion-telegram" onclick="toggleContent(event, 'discussion-telegram')">Telegram</a> | 
         <a href="#" class="link" data-section="discussion-instagram" onclick="toggleContent(event, 'discussion-instagram')">Instagram</a> | 
