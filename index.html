@@ -67,17 +67,13 @@ nav a:hover {
     background: white;
     padding: 20px; /* Reduced padding for a more compact card */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
+
+border-left: 5px solid #ffd700; /* Light gold color for a premium feel *
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-left-color: red; /* Change border color on hover */
-}
+
 
 .card h3 {
     font-size: 1.6em; /* Slightly smaller heading */
@@ -89,7 +85,7 @@ nav a:hover {
 
 .card p {
     font-size: 1em; /* Adjusted text size for better readability */
-    color: #555;
+    color: #55;
     line-height: 1.5;
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -102,7 +98,7 @@ nav a:hover {
 
 .card p {
     background: #f0f4f7; /* Light background for text */
-    border-left: 3px solid #6c63ff; /* Add colored left border for text */
+    border-left: 3px solid #b76e79; /* Add colored left border for text */
     padding: 10px; /* Add padding for better readability */
     border-radius: 4px; /* Rounded corners for a soft look */
 }
@@ -406,29 +402,46 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+
+
+
+
+
 .contact-item {
     font-size: 2em;
-    color: #555;
-    font-family: 'Courier New', monospace; /* Change to your preferred font */
+    color: #2A2A2A; /* A richer, deeper color for a premium feel */
+    font-family: 'Georgia', serif; /* Premium font */
     margin: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition effects */
+    display: block; /* Ensures each item is on a new line */
+}
+
+.contact-item:hover {
+    color: #DAA520; /* Golden color for a premium look on hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .contact-item a {
-    color: #2E99FF;
-    text-decoration: none;
-    font-weight: bold; /* Optional: Make links bold */
+    color: #2E99FF; /* Premium blue color for links */
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition for links */
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
-    color: #004080; /* Optional: Change color on hover */
+    color: #004080; /* Darker blue color for a more premium look on hover */
 }
+
+
+
+
 
 
 .sharpe-font {
     font-family: 'Sharpe', sans-serif; /* Use the Sharpe font */
     font-size: 2em; /* Increase the font size */
-    color: #4a90e2; /* Change the color to a cool blue */
+    color: #003366; /* Darken the color on hover */
     font-weight: bold; /* Make the text bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
     letter-spacing: 1px; /* Increase spacing between letters for a modern look */
@@ -450,8 +463,8 @@ nav a:hover {
 .section {
     padding: 20px; /* Padding for spacing */
     border-radius: 10px;
-    box-shadow:;
-    margin: 0px;
+    box-shadow: none; /* Placeholder for shadow, currently none */
+    margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
@@ -470,17 +483,10 @@ nav a:hover {
 .section .card {
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
     width: 100%; /* Full width for card */
     box-sizing: border-box; /* Include padding and border in width */
-}
-
-/* Card Hover Effect */
-.section .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: none; /* Removed hover transitions */
 }
 
 /* Card Heading Styling */
@@ -705,30 +711,7 @@ nav a:hover {
 
 
 
-/* General Styles for Cards */
-.card {
-    background: white;
-    padding: 20px; /* Reduced padding for a more compact card */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #6c63ff; /* Add a colored left border for emphasis */
-}
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-left-color: red; /* Change border color on hover */
-}
-
-/* Card Header */
-.card h3 {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
 
 /* Links Container for Horizontal Display */
 .more-content {
@@ -929,7 +912,7 @@ nav a:hover {
                 <div class="profile-header">
                     <img src="Image/Front-Dp/profile-picture270801.jpg" alt="Profile Picture">
                     <div class="profile-details">
-                        <h1 class="sharpe-font">Atharv Roy</h1>
+                        <h1 class="sharpe-font">Atharv Roy🌱</h1>
 
 
 <a href="https://www.instagram.com/___atharv_ava_?igsh=ZXBib2x3bmtranVx" target="_blank" class="follow-button">
@@ -984,14 +967,14 @@ nav a:hover {
 <div class="card">
     <h3 onclick="toggleContent(this)">All Contents</h3>
     <p class="more-content" style="display: block;">
-        <a href="#" class="link" data-section="pictures">Pictures</a> | 
+        <a href="#" class="link" data-section="Nestures">Nestures</a> | 
         <a href="#" class="link" data-section="exercises">Exercises</a> | 
         <a href="#" class="link" data-section="notes">Notes</a>
     </p>
 </div>
 
-<!-- Pictures Section -->
-<div id="pictures" class="content-section" style="display: none;">
+<!-- Nestures Section -->
+<div id="Nestures" class="content-section" style="display: none;">
     <div class="card-content">
         <h3>Code Samples</h3>
         <p>Dive into code samples for various programming languages and frameworks.</p>
@@ -1042,9 +1025,9 @@ nav a:hover {
 <div class="card">
     <h3 onclick="toggleContent(this)">Mind Maps</h3>
     <p class="more-content" style="display: block;">
-        <a href="#" class="link" data-section="mind-maps-ideas">Ideas</a> | 
-        <a href="#" class="link" data-section="mind-maps-jots">Jots</a> | 
-        <a href="#" class="link" data-section="mind-maps-keys">Keys</a>
+        <a href="#" class="link" data-section="mind-maps-ideas">Nestures</a> | 
+        <a href="#" class="link" data-section="mind-maps-jots">Exercises</a> | 
+        <a href="#" class="link" data-section="mind-maps-keys">Notes</a>
     </p>
 </div>
 
@@ -1085,9 +1068,9 @@ nav a:hover {
 <div class="card">
     <h3 onclick="toggleContent(this)">Discussion</h3>
     <p class="more-content" style="display: block;">
-        <a href="#" class="link" data-section="discussion-plans">Plans</a> | 
-        <a href="#" class="link" data-section="discussion-quests">Quests</a> | 
-        <a href="#" class="link" data-section="discussion-rests">Rests</a>
+        <a href="#" class="link" data-section="discussion-plans">Nestures</a> | 
+        <a href="#" class="link" data-section="discussion-quests">Exercises</a> | 
+        <a href="#" class="link" data-section="discussion-rests">Notes</a>
     </p>
 </div>
 
