@@ -745,50 +745,55 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
 /* Content Section */
 .content-section {
     margin: 15px 0;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1.5px solid red;
-    background: #fafafa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(145deg, #f0f4f8, #ffffff); /* Light grayish-blue to white gradient for a clean, elegant look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.1); /* Softer inner shadow */
+    transition: box-shadow 0.3s ease;
 }
 
 /* Content Section Heading */
 .content-section h3 {
     font-family: 'Pacifico', cursive; /* Pacifico font */
-    font-size: 1.1em;
-    color: red;
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #c62839; /* Deep red for a rich, premium feel */
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(198, 40, 48, 0.3); /* Subtle shadow for enhanced readability */
 }
 
 /* Content Section Paragraphs */
 .content-section p {
     font-family: 'Arial', sans-serif;
     font-size: 1em;
-    color: #555;
-    background: #f0f4f7; /* Light background */
-    border-left: 4px solid red;
-    padding: 10px;
+    color: #2e2e2e; /* Dark slate gray for a premium, refined text color */
+    background: linear-gradient(135deg, #fafafa, #f0f4f8); /* Very light gray to light blue gradient for elegance */
+    border-left: 4px solid #d32f2f; /* Rich red for a luxurious border accent */
+    padding: 12px;
     margin: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft, deeper shadow for added depth */
 }
 
+/* Card Content Headings */
+.card-content h3 {
+    font-family: 'Arial', sans-serif; /* Simple font style for headings */
+    font-weight: bold; /* Bold heading for prominence */
+    color: #d32f2f; /* Rich red for a premium look */
+    margin-bottom: 8px; /* Spacing for visual separation */
+}
 
-
-
-
-    .card-content h3 {
-        font-family: Arial, sans-serif; /* Simple font style for headings */
-        font-weight: bold; /* Optionally, make the heading bold */
-        color: #000; /* Black color for headings, adjust as needed */
-    }
-
-    .card-content p {
-        font-family: Arial, sans-serif; /* Simple font style for paragraph text */
-        font-weight: normal; /* Regular weight for the paragraph text */
-        color: #333; /* Dark gray color for readability, adjust as needed */
-    }
+/* Card Content Paragraphs */
+.card-content p {
+    font-family: 'Arial', sans-serif; /* Simple font style for paragraph text */
+    font-weight: normal; /* Regular weight for the paragraph text */
+    color: #333; /* Dark gray for better readability */
+    background-color: #f5f5f5; /* Very light gray for a soft, premium feel */
+    padding: 8px; /* Increased padding for a more spacious look */
+    line-height: 1.6; /* Improved line height for readability */
+    border-radius: 6px; /* Rounded corners for a smooth, refined look */
+    margin-top: 6px; /* Margin for better separation */
+}
 
 
 
@@ -1096,6 +1101,14 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
         <h3>Technology Development</h3>
         <p>Methods for developing and refining new technology ideas.</p>
     </div>
+    <div class="card-content">
+        <h3>Creative Processes</h3>
+        <p>Techniques for fostering creativity in technology development.</p>
+    </div>
+    <div class="card-content">
+        <h3>Collaborative Tools</h3>
+        <p>Tools and methods for effective collaboration in tech projects.</p>
+    </div>
 </div>
 
 <div id="mind-maps-jots" class="content-section" style="display: none;">
@@ -1107,6 +1120,14 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
         <h3>Detailed Observations</h3>
         <p>In-depth notes and observations on specific technology topics.</p>
     </div>
+    <div class="card-content">
+        <h3>Research Insights</h3>
+        <p>Insights from recent technology research and studies.</p>
+    </div>
+    <div class="card-content">
+        <h3>Idea Annotations</h3>
+        <p>Annotations and comments on emerging tech ideas.</p>
+    </div>
 </div>
 
 <div id="mind-maps-keys" class="content-section" style="display: none;">
@@ -1117,6 +1138,14 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
     <div class="card-content">
         <h3>Effective Techniques</h3>
         <p>Techniques for effectively applying technology concepts in practice.</p>
+    </div>
+    <div class="card-content">
+        <h3>Advanced Strategies</h3>
+        <p>Strategies for advanced application of tech concepts.</p>
+    </div>
+    <div class="card-content">
+        <h3>Practical Applications</h3>
+        <p>Real-world applications of core technology concepts.</p>
     </div>
 </div>
 
@@ -1139,6 +1168,18 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
         <h3>Planning Techniques</h3>
         <p>Effective techniques for planning technology-related tasks and projects.</p>
     </div>
+    <div class="card-content">
+        <h3>Resource Allocation</h3>
+        <p>Best practices for allocating resources in technology projects.</p>
+    </div>
+    <div class="card-content">
+        <h3>Timeline Management</h3>
+        <p>Strategies for managing and adhering to project timelines.</p>
+    </div>
+    <div class="card-content">
+        <h3>Risk Management</h3>
+        <p>Identify and mitigate risks associated with technology projects.</p>
+    </div>
 </div>
 
 <div id="discussion-quests" class="content-section" style="display: none;">
@@ -1150,16 +1191,40 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
         <h3>Solution Strategies</h3>
         <p>Share and learn strategies for overcoming technology-related challenges.</p>
     </div>
+    <div class="card-content">
+        <h3>Innovative Solutions</h3>
+        <p>Discuss innovative solutions to common technology problems.</p>
+    </div>
+    <div class="card-content">
+        <h3>Case Studies</h3>
+        <p>Analyze case studies of technology projects and their outcomes.</p>
+    </div>
+    <div class="card-content">
+        <h3>Future Trends</h3>
+        <p>Explore upcoming trends and their potential challenges in technology.</p>
+    </div>
 </div>
 
 <div id="discussion-rests" class="content-section" style="display: none;">
     <div class="card-content">
-        <h3> <span class="bordered">Work-Life Balance</span> </h3>   
+        <h3><span class="bordered">Work-Life Balance</span></h3>
         <p>Discuss strategies for balancing work and rest in technology careers.</p>
     </div>
     <div class="card-content">
-        <h3> <span class="bordered">Recovery Techniques</span> </h3> 
+        <h3>Recovery Techniques</h3>
         <p>Techniques for effective rest and recovery in tech work environments.</p>
+    </div>
+    <div class="card-content">
+        <h3>Stress Management</h3>
+        <p>Methods for managing stress associated with technology work.</p>
+    </div>
+    <div class="card-content">
+        <h3>Mindfulness Practices</h3>
+        <p>Incorporating mindfulness practices into daily routines for better well-being.</p>
+    </div>
+    <div class="card-content">
+        <h3>Healthy Habits</h3>
+        <p>Developing and maintaining healthy habits for a balanced tech lifestyle.</p>
     </div>
 </div>
 
@@ -1210,11 +1275,11 @@ border-left: 4.07px solid #ffd700; /* Light gold color for a premium feel *
             <div class="contact-info">
                 <h2 id="contactInfoHeader">Contact Information</h2>
                 <div class="contact-info-details hidden">
-                    <p class="contact-item">Email: <a href="mailto:atharvava@proton.me">atharv@me</a></p>
-                    <p class="contact-item">Instagram: <a href="https://www.instagram.com/___atharv_ava_" target="_blank">___atharv_ava_</a></p>
-                    <p class="contact-item">Telegram: <a href="https://t.me/Atharv_siddhu" target="_blank">t.me/atharv</a></p>
-                    <p class="contact-item">Twitter: <a href="https://x.com/atharvrou?s=09" target="_blank">x-atharv</a></p>
-                    <p class="contact-item">Deltalab: <a href="https://i.delta.chat/#BA90635952B508991538ED1B995BEA215064BF6F&a=68c7ktcts%40nine.testrun.org&n=Atharv&i=4s2yQTisHMi&s=e3p7IJVsUP2" target="_blank">atharv's chat</a></p>
+                    <p class="contact-item">Maily: <a href="mailto:atharvava@proton.me">atharv@me</a></p>
+                    <p class="contact-item">Insta: <a href="https://www.instagram.com/___atharv_ava_" target="_blank">___atharv_ava_</a></p>
+                    <p class="contact-item">TGram: <a href="https://t.me/Atharv_siddhu" target="_blank">t.me/atharv</a></p>
+                    <p class="contact-item">TwitX: <a href="https://x.com/atharvrou?s=09" target="_blank">x-atharv</a></p>
+                    <p class="contact-item">DLabX: <a href="https://i.delta.chat/#BA90635952B508991538ED1B995BEA215064BF6F&a=68c7ktcts%40nine.testrun.org&n=Atharv&i=4s2yQTisHMi&s=e3p7IJVsUP2" target="_blank">atharv's chat</a></p>
                 </div>
             </div>
         </div>
