@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharv Siddhu Profile</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll when sidebar is open */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .cover-photo {
+            width: 100%;
+            height: 200px;
+            background-image: url('facebookpfl/profile/yourimageback18092024.jpg'); /* add the path to your jpg file */
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .profile-photo {
+            position: absolute;
+            bottom: -60px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            border: 5px solid white;
+            border-radius: 50%;
+            background-color: white;
+            background-image: url('facebookpfl/profile/yourimagehead18092024.jpg'); /* add the path to your jpg file */
+            background-position: center;
+            background-size: cover;
+        }
+
+        .camera-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: black;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .profile-info {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .profile-info h1 span {
+            font-weight: bold;
+            margin: 0px;
+            font-size: 18px;
+        }
+        .profile-info h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: left;
+            font-weight: bold;
+            color: black;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .followers-info {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #0000000;
+        }
+
+        .followers-info span {
+            font-weight: bold;
+            margin: 3px;
+        }
+
+        .followers-info-dot {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: black;
+            margin: 2px;
+        }
+
+        .followers-info-dot span {
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .bio {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: left;
+            color: #444;
+        }
+
+        .bio .emoji {
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 10px 35px;
+            font-size: 14px;
+            color: white;
+            background-color: #000FFF;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+
+.follow-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #000FFF;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.follow-button svg {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.follow-button:hover {
+    background-color: #218838;
+}
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between the items */
+    margin-top: 10px; /* Add margin to create space above */
+}
+
+.advertise,
+.small-box {
+    text-align: left;
+}
+
+.advertise button,
+.small-box button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.advertise button {
+    padding: 10px 97px; /* Adjust padding for consistency */
+    font-size: 14px;
+    color: white;
+    margin-left: 7px;
+    background-color: #ff9800; /* Original color for Advertise */
+}
+
+.advertise button:hover {
+    background-color: #e68900; /* Hover color for Advertise */
+}
+
+.small-box button {
+    padding: 10px 30px; /* Adjust padding for consistency */
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    background-color: #000FFF; /* Different color for New Box */
+}
+
+.small-box button:hover {
+    background-color: #388e3c; /* Hover color for New Box */
+}
+.details {
+    background-color: #ffffff; /* Soft white background */
+    padding: 20px;
+    border-radius: 12px; /* Slightly rounded corners */
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0; /* Soft border for added definition */
+}
+
+        .details h3 {
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .details p {
+            margin: 0;
+            color: #555;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .bottom-menu {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: white;
+
+            font-size: 14px;
+        }
+
+        .bottom-menu a {
+            color: #007bff;
+            text-decoration: none;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .bottom-menu a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        .bottom-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .bottom-menu a:hover::before {
+            width: 100%;
+        }
+
+/* Sidebar Styles */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    display: none; /* Hide overlay by default */
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Slightly wider for a more premium feel */
+    height: 100%;
+    background-color: #ff9800;
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+    padding: 30px; /* Increased padding for a more spacious look */
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow for a premium effect */
+    z-index: 1001;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', sans-serif; /* Modern font */
+    font-size: 24px; /* Larger, more impactful heading */
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin: 15px 0; /* Increased margin for better spacing */
+    font-size: 18px; /* Larger font size for readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.sidebar a:hover {
+    color: #ffd700; /* Gold color for premium look */
+    text-decoration: underline;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px; /* Larger close button for emphasis */
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.sidebar .close-btn:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Cover Photo -->
+    <div class="cover-photo">
+        <div class="profile-photo"></div>
+        <span class="camera-icon" onclick="toggleSidebar()">📷</span>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="profile-info">
+        <h1>Atharv Siddhu <span>(Atharv)</span></h1>
+        <div class="followers-info">
+            <span>4.4k</span> followers
+            <div class="followers-info-dot"><span>•</span></div>
+            <span>3</span> following
+        </div>
+        <div class="bio">Past cannot be changed, cannot be forgotten <span class="emoji">😉</span></div>
+    </div>
+
+<!-- Buttons -->
+<div class="buttons">
+    <button class="btn">See Dashboard</button>
+<a href="https://www.instagram.com/___atharv_ava_?igsh=ZXBib2x3bmtranVx" target="_blank" class="follow-button">
+    <!-- Instagram SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.307.975.976 1.245 2.242 1.307 3.608.058 1.266.069 1.646.069 4.852 0 3.204-.011 3.584-.069 4.85-.062 1.366-.332 2.633-1.307 3.608-.976.975-2.242 1.245-3.608 1.307-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.366-.062-2.633-.332-3.608-1.307-.975-.976-1.245-2.242-1.307-3.608-.058-1.266-.069-1.646-.069-4.85s.011-3.584.069-4.85c.062-1.366.332-2.633 1.307-3.608.976-.975 2.242-1.245 3.608-1.307 1.266-.058 1.646-.069 4.85-.069m0-2.163c-3.259 0-3.667.013-4.947.072-1.281.058-2.563.337-3.537 1.312-.975.974-1.255 2.256-1.313 3.537-.059 1.28-.072 1.688-.072 4.947 0 3.259.013 3.667.072 4.947.058 1.281.337 2.563 1.313 3.537.974.975 2.256 1.255 3.537 1.313 1.28.059 1.688.072 4.947.072 3.259 0 3.667-.013 4.947-.072 1.281-.058 2.563-.337 3.537-1.313.975-.974 1.255-2.256 1.313-3.537.059-1.28.072-1.688.072-4.947 0-3.259-.013-3.667-.072-4.947-.058-1.281-.337-2.563-1.313-3.537-.974-.975-2.256-1.255-3.537-1.313-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.397 0-6.162 2.765-6.162 6.162s2.765 6.162 6.162 6.162 6.162-2.765 6.162-6.162-2.765-6.162-6.162-6.162zm0 10.275c-2.27 0-4.113-1.843-4.113-4.113s1.843-4.113 4.113-4.113 4.113 1.843 4.113 4.113-1.843 4.113-4.113 4.113zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
+    </svg>
+    Follow on Insta
+</a>
+</div>
+
+<!-- Buttons Wrapper -->
+<div class="buttons-wrapper">
+    <!-- Advertise Section -->
+    <div class="advertise">
+        <button>Advertise</button>
+    </div>
+
+    <!-- New Small Box Section -->
+    <div class="small-box">
+        <button> ••• </button>
+    </div>
+</div>
+
+<!-- Bottom Menu -->
+<div class="bottom-menu">
+    <a href="#" data-type="posts">Posts</a>
+    <a href="#" data-type="about">About</a>
+    <a href="#" data-type="photos">Photos</a>
+    <a href="#" data-type="more">More</a>
+</div>
+
+<!-- Details Section -->
+<div class="details" id="details-section">
+    <h3>Details</h3>
+    <p id="details-content">Profile · Digital creator</p>
+    <p><a href="#" style="text-decoration: none;" id="details-link">See your About info</a></p>
+</div>
+
+<!-- Dynamic Boxes Section -->
+<div id="dynamic-boxes"></div>
+
+
+
+
+
+
+
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <span class="close-btn" onclick="toggleSidebar()">✖</span>
+    <h2>Sidebar</h2>
+    <a href="index.html">Home</a>
+    <a href="indexHomie.html">Homie</a>
+    <a href="#">Option 3</a>
+    <a href="#">Option 4</a>
+</div>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            overlay.style.display = 'none';
+        } else {
+            sidebar.classList.add('open');
+            overlay.style.display = 'block';
+        }
+    }
+
+
+
+    const detailsSection = document.getElementById('details-section');
+    const detailsContent = document.getElementById('details-content');
+    const detailsLink = document.getElementById('details-link');
+    const dynamicBoxesContainer = document.getElementById('dynamic-boxes'); // Container for dynamic boxes
+
+    // Data to be displayed for each section
+    const detailsData = {
+        posts: {
+            content: 'Recent Posts and Updates',
+            link: 'View all posts',
+            boxes: [
+                { title: 'Latest Post', content: 'Check out the latest post about technology.' },
+                { title: 'Top Stories', content: 'Explore trending stories this week.' }
+            ]
+        },
+        about: {
+            content: 'Learn more about Atharv Siddhu',
+            link: 'See your About info',
+            boxes: [
+                { title: 'Biography', content: 'Atharv is a passionate digital creator.' },
+                { title: 'Achievements', content: 'Multiple awards for innovative designs.' }
+            ]
+        },
+        photos: {
+            content: 'Check out the latest photos',
+            link: 'View all photos',
+            boxes: [
+                { title: 'Photo Album 1', content: 'Collection of travel photos.' },
+                { title: 'Photo Album 2', content: 'Highlights from recent events.' }
+            ]
+        },
+        more: {
+            content: 'Explore more options and features',
+            link: 'Discover more',
+            boxes: [
+                { title: 'Future Plans', content: 'Upcoming projects and collaborations.' },
+                { title: 'Feedback', content: 'Share your thoughts and suggestions.' }
+            ]
+        }
+    };
+
+    // Function to clear dynamic boxes
+    function clearDynamicBoxes() {
+        dynamicBoxesContainer.innerHTML = ''; // Clear the current content
+    }
+
+    // Function to create a new dynamic box
+    function createDynamicBox(title, content) {
+        const box = document.createElement('div');
+        box.className = 'dynamic-box';
+        box.style.border = '1px solid #ccc';
+        box.style.margin = '10px 0';
+        box.style.padding = '10px';
+        box.style.borderRadius = '8px';
+
+        const boxTitle = document.createElement('h4');
+        boxTitle.textContent = title;
+        boxTitle.style.color = '#007bff'; // Style for the title
+        boxTitle.style.marginBottom = '5px';
+
+        const boxContent = document.createElement('p');
+        boxContent.textContent = content;
+        boxContent.style.color = '#555'; // Style for the content
+
+        box.appendChild(boxTitle);
+        box.appendChild(boxContent);
+
+        dynamicBoxesContainer.appendChild(box);
+    }
+
+    // Add event listeners to the bottom menu links
+    document.querySelectorAll('.bottom-menu a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            const type = this.getAttribute('data-type'); // Get the data-type value
+            
+            // Update the details section with the corresponding content
+            if (detailsData[type]) {
+                detailsContent.textContent = detailsData[type].content;
+                detailsLink.textContent = detailsData[type].link;
+
+                // Clear existing dynamic boxes
+                clearDynamicBoxes();
+
+                // Add new dynamic boxes
+                detailsData[type].boxes.forEach(box => {
+                    createDynamicBox(box.title, box.content);
+                });
+            }
+        });
+    });
+
+
+
+</script>
+
+</body>
+</html>
