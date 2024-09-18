@@ -327,6 +327,73 @@
 
 
 
+        .dynamic-box {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .dynamic-box h4 {
+            color: #007bff; /* Style for the title */
+            margin-bottom: 5px;
+        }
+
+        .dynamic-box p {
+            color: #555; /* Style for the content */
+        }
+
+.dynamic-box.latest-post {
+    background-color: #ffffff; /* Light lavender background */
+    border: 1px solid #c5cae9; /* Lavender border */
+    color: #3f51b5; /* Deep indigo text */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.dynamic-box.latest-post:hover {
+    background-color: #d1c4e9; /* Light purple background on hover */
+    border: 1px solid #b39ddb; /* Purple border on hover */
+    color: #303f9f; /* Darker indigo text on hover */
+}
+
+.dynamic-box.biography {
+    background-color: #fce4ec; /* Light pink background */
+    border: 1px solid #f8bbd0; /* Soft pink border */
+    color: #c2185b; /* Deep pink text */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.dynamic-box.biography:hover {
+    background-color: #f48fb1; /* Pink background on hover */
+    border: 1px solid #f06292; /* Darker pink border on hover */
+    color: #880e4f; /* Darker pink text on hover */
+}
+
+.dynamic-box.photos {
+    background-color: #e8f5e9; /* Light mint background */
+    border: 1px solid #a5d6a7; /* Mint border */
+    color: #388e3c; /* Darker green text */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.dynamic-box.photos:hover {
+    background-color: #c8e6c9; /* Mint background on hover */
+    border: 1px solid #81c784; /* Darker mint border on hover */
+    color: #2c6c2f; /* Darker green text on hover */
+}
+
+.dynamic-box.future-plans {
+    background-color: #fff8e1; /* Soft cream background */
+    border: 1px solid #ffe0b2; /* Cream border */
+    color: #f57c00; /* Deep orange text */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.dynamic-box.future-plans:hover {
+    background-color: #ffecb3; /* Cream background on hover */
+    border: 1px solid #ffd54f; /* Darker cream border on hover */
+    color: #e65100; /* Darker orange text on hover */
+}
 
     </style>
 </head>
@@ -350,179 +417,193 @@
         <div class="bio">Past cannot be changed, cannot be forgotten <span class="emoji">😉</span></div>
     </div>
 
-<!-- Buttons -->
-<div class="buttons">
-    <button class="btn">See Dashboard</button>
-<a href="https://www.instagram.com/___atharv_ava_?igsh=ZXBib2x3bmtranVx" target="_blank" class="follow-button">
-    <!-- Instagram SVG Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.307.975.976 1.245 2.242 1.307 3.608.058 1.266.069 1.646.069 4.852 0 3.204-.011 3.584-.069 4.85-.062 1.366-.332 2.633-1.307 3.608-.976.975-2.242 1.245-3.608 1.307-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.366-.062-2.633-.332-3.608-1.307-.975-.976-1.245-2.242-1.307-3.608-.058-1.266-.069-1.646-.069-4.85s.011-3.584.069-4.85c.062-1.366.332-2.633 1.307-3.608.976-.975 2.242-1.245 3.608-1.307 1.266-.058 1.646-.069 4.85-.069m0-2.163c-3.259 0-3.667.013-4.947.072-1.281.058-2.563.337-3.537 1.312-.975.974-1.255 2.256-1.313 3.537-.059 1.28-.072 1.688-.072 4.947 0 3.259.013 3.667.072 4.947.058 1.281.337 2.563 1.313 3.537.974.975 2.256 1.255 3.537 1.313 1.28.059 1.688.072 4.947.072 3.259 0 3.667-.013 4.947-.072 1.281-.058 2.563-.337 3.537-1.313.975-.974 1.255-2.256 1.313-3.537.059-1.28.072-1.688.072-4.947 0-3.259-.013-3.667-.072-4.947-.058-1.281-.337-2.563-1.313-3.537-.974-.975-2.256-1.255-3.537-1.313-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.397 0-6.162 2.765-6.162 6.162s2.765 6.162 6.162 6.162 6.162-2.765 6.162-6.162-2.765-6.162-6.162-6.162zm0 10.275c-2.27 0-4.113-1.843-4.113-4.113s1.843-4.113 4.113-4.113 4.113 1.843 4.113 4.113-1.843 4.113-4.113 4.113zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
-    </svg>
-    Follow on Insta
-</a>
-</div>
-
-<!-- Buttons Wrapper -->
-<div class="buttons-wrapper">
-    <!-- Advertise Section -->
-    <div class="advertise">
-        <button>Advertise</button>
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="btn">See Dashboard</button>
+        <a href="https://www.instagram.com/___atharv_ava_?igsh=ZXBib2x3bmtranVx" target="_blank" class="follow-button">
+            <!-- Instagram SVG Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.307.975.976 1.245 2.242 1.307 3.608.058 1.266.069 1.646.069 4.852 0 3.204-.011 3.584-.069 4.85-.062 1.366-.332 2.633-1.307 3.608-.976.975-2.242 1.245-3.608 1.307-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.366-.062-2.633-.332-3.608-1.307-.975-.976-1.245-2.242-1.307-3.608-.058-1.266-.069-1.646-.069-4.85s.011-3.584.069-4.85c.062-1.366.332-2.633 1.307-3.608.976-.975 2.242-1.245 3.608-1.307 1.266-.058 1.646-.069 4.85-.069m0-2.163c-3.259 0-3.667.013-4.947.072-1.281.058-2.563.337-3.537 1.312-.975.974-1.255 2.256-1.313 3.537-.059 1.28-.072 1.688-.072 4.947 0 3.259.013 3.667.072 4.947.058 1.281.337 2.563 1.313 3.537.974.975 2.256 1.255 3.537 1.313 1.28.059 1.688.072 4.947.072 3.259 0 3.667-.013 4.947-.072 1.281-.058 2.563-.337 3.537-1.313.975-.974 1.255-2.256 1.313-3.537.059-1.28.072-1.688.072-4.947 0-3.259-.013-3.667-.072-4.947-.058-1.281-.337-2.563-1.313-3.537-.974-.975-2.256-1.255-3.537-1.313-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.397 0-6.162 2.765-6.162 6.162s2.765 6.162 6.162 6.162 6.162-2.765 6.162-6.162-2.765-6.162-6.162-6.162zm0 10.275c-2.27 0-4.113-1.843-4.113-4.113s1.843-4.113 4.113-4.113 4.113 1.843 4.113 4.113-1.843 4.113-4.113 4.113zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
+            </svg>
+            Follow on Insta
+        </a>
     </div>
 
-    <!-- New Small Box Section -->
-    <div class="small-box">
-        <button> ••• </button>
+    <!-- Buttons Wrapper -->
+    <div class="buttons-wrapper">
+        <!-- Advertise Section -->
+        <div class="advertise">
+            <button>Advertise</button>
+        </div>
+
+        <!-- New Small Box Section -->
+        <div class="small-box">
+            <button> ••• </button>
+        </div>
     </div>
-</div>
 
-<!-- Bottom Menu -->
-<div class="bottom-menu">
-    <a href="#" data-type="posts">Posts</a>
-    <a href="#" data-type="about">About</a>
-    <a href="#" data-type="photos">Photos</a>
-    <a href="#" data-type="more">More</a>
-</div>
+    <!-- Bottom Menu -->
+    <div class="bottom-menu">
+        <a href="#" data-type="posts">Posts</a>
+        <a href="#" data-type="about">About</a>
+        <a href="#" data-type="photos">Photos</a>
+        <a href="#" data-type="more">More</a>
+    </div>
 
-<!-- Details Section -->
-<div class="details" id="details-section">
-    <h3>Details</h3>
-    <p id="details-content">Profile · Digital creator</p>
-    <p><a href="#" style="text-decoration: none;" id="details-link">See your About info</a></p>
-</div>
+    <!-- Details Section -->
+    <div class="details" id="details-section">
+        <h3>Details</h3>
+        <p id="details-content">Recent Posts and Updates</p>
+        <p><a href="#" style="text-decoration: none;" id="details-link">View all posts</a></p>
+    </div>
 
-<!-- Dynamic Boxes Section -->
-<div id="dynamic-boxes"></div>
+    <!-- Dynamic Boxes Section -->
+    <div id="dynamic-boxes">
+        <div class="dynamic-box">
+            <h4>Latest Post</h4>
+            <p>Check out the latest post about technology.</p>
+        </div>
+        <div class="dynamic-box">
+            <h4>Top Stories</h4>
+            <p>Explore trending stories this week.</p>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">✖</span>
+        <h2>Sidebar</h2>
+        <a href="index.html">Home</a>
+        <a href="index1.html">Homie</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+    </div>
 
 
-
-
-
-
-
-
-<!-- Sidebar Overlay -->
-<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
-
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-    <span class="close-btn" onclick="toggleSidebar()">✖</span>
-    <h2>Sidebar</h2>
-    <a href="index.html">Home</a>
-    <a href="indexHomie.html">Homie</a>
-    <a href="#">Option 3</a>
-    <a href="#">Option 4</a>
-</div>
-
-<script>
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-        if (sidebar.classList.contains('open')) {
-            sidebar.classList.remove('open');
-            overlay.style.display = 'none';
-        } else {
-            sidebar.classList.add('open');
-            overlay.style.display = 'block';
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                overlay.style.display = 'none';
+            } else {
+                sidebar.classList.add('open');
+                overlay.style.display = 'block';
+            }
         }
-    }
 
+        const detailsSection = document.getElementById('details-section');
+        const detailsContent = document.getElementById('details-content');
+        const detailsLink = document.getElementById('details-link');
+        const dynamicBoxesContainer = document.getElementById('dynamic-boxes'); // Container for dynamic boxes
 
+        // Data to be displayed for each section
+        const detailsData = {
+            posts: {
+                content: 'Recent Posts and Updates',
+                link: 'View all posts',
+boxes: [
+    { title: 'Latest Post', content: 'Discover the newest trends in technology.', type: 'latest-post' },
+    { title: 'Tech Insights', content: 'Dive into our latest analysis on cutting-edge tech.', type: 'latest-post' },
+    { title: 'Top Stories', content: 'Catch up on the most talked-about stories of the week.', type: 'latest-post' }
+]
+            },
+            about: {
+                content: 'Learn more about Atharv Siddhu',
+                link: 'See your About info',
+                boxes: [
+                    { title: 'Biography', content: 'Atharv is a passionate digital creator.', type: 'biography' },
+                    { title: 'Achievements', content: 'Multiple awards for innovative designs.', type: 'biography' }
+                ]
+            },
+            photos: {
+                content: 'Check out the latest photos',
+link: 'View all photos',
+boxes: [
+    { title: 'Sunset Escapes', content: 'Mesmerizing sunsets captured from around the world.', type: 'photos' },
+    { title: 'Wildlife Wonders', content: 'Incredible moments with wildlife in their natural habitat.', type: 'photos' },
+    { title: 'City Lights', content: 'Vibrant cityscapes and nightlife photography.', type: 'photos' },
+    { title: 'Seasonal Splendor', content: 'Beautiful scenes showcasing the changing seasons.', type: 'photos' }
+]
+            },
+            more: {
+                content: 'Explore more options and features',
+                link: 'Discover more',
+                boxes: [
+                    { title: 'Future Plans', content: 'Upcoming projects and collaborations.', type: 'future-plans' },
+                    { title: 'Feedback', content: 'Share your thoughts and suggestions.', type: 'future-plans' }
+                ]
+            }
+        };
 
-    const detailsSection = document.getElementById('details-section');
-    const detailsContent = document.getElementById('details-content');
-    const detailsLink = document.getElementById('details-link');
-    const dynamicBoxesContainer = document.getElementById('dynamic-boxes'); // Container for dynamic boxes
-
-    // Data to be displayed for each section
-    const detailsData = {
-        posts: {
-            content: 'Recent Posts and Updates',
-            link: 'View all posts',
-            boxes: [
-                { title: 'Latest Post', content: 'Check out the latest post about technology.' },
-                { title: 'Top Stories', content: 'Explore trending stories this week.' }
-            ]
-        },
-        about: {
-            content: 'Learn more about Atharv Siddhu',
-            link: 'See your About info',
-            boxes: [
-                { title: 'Biography', content: 'Atharv is a passionate digital creator.' },
-                { title: 'Achievements', content: 'Multiple awards for innovative designs.' }
-            ]
-        },
-        photos: {
-            content: 'Check out the latest photos',
-            link: 'View all photos',
-            boxes: [
-                { title: 'Photo Album 1', content: 'Collection of travel photos.' },
-                { title: 'Photo Album 2', content: 'Highlights from recent events.' }
-            ]
-        },
-        more: {
-            content: 'Explore more options and features',
-            link: 'Discover more',
-            boxes: [
-                { title: 'Future Plans', content: 'Upcoming projects and collaborations.' },
-                { title: 'Feedback', content: 'Share your thoughts and suggestions.' }
-            ]
+        // Function to clear dynamic boxes
+        function clearDynamicBoxes() {
+            dynamicBoxesContainer.innerHTML = ''; // Clear the current content
         }
-    };
 
-    // Function to clear dynamic boxes
-    function clearDynamicBoxes() {
-        dynamicBoxesContainer.innerHTML = ''; // Clear the current content
-    }
+        // Function to create a new dynamic box
+        function createDynamicBox(title, content, type) {
+            const box = document.createElement('div');
+            box.className = `dynamic-box ${type}`; // Add the type-specific class
+            box.style.borderRadius = '8px';
 
-    // Function to create a new dynamic box
-    function createDynamicBox(title, content) {
-        const box = document.createElement('div');
-        box.className = 'dynamic-box';
-        box.style.border = '1px solid #ccc';
-        box.style.margin = '10px 0';
-        box.style.padding = '10px';
-        box.style.borderRadius = '8px';
+            const boxTitle = document.createElement('h4');
+            boxTitle.textContent = title;
+            boxTitle.style.marginBottom = '5px';
 
-        const boxTitle = document.createElement('h4');
-        boxTitle.textContent = title;
-        boxTitle.style.color = '#007bff'; // Style for the title
-        boxTitle.style.marginBottom = '5px';
+            const boxContent = document.createElement('p');
+            boxContent.textContent = content;
 
-        const boxContent = document.createElement('p');
-        boxContent.textContent = content;
-        boxContent.style.color = '#555'; // Style for the content
+            box.appendChild(boxTitle);
+            box.appendChild(boxContent);
 
-        box.appendChild(boxTitle);
-        box.appendChild(boxContent);
+            dynamicBoxesContainer.appendChild(box);
+        }
 
-        dynamicBoxesContainer.appendChild(box);
-    }
+        // Add event listeners to the bottom menu links
+        document.querySelectorAll('.bottom-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const type = this.getAttribute('data-type'); // Get the data-type value
+                
+                // Update the details section with the corresponding content
+                if (detailsData[type]) {
+                    detailsContent.textContent = detailsData[type].content;
+                    detailsLink.textContent = detailsData[type].link;
 
-    // Add event listeners to the bottom menu links
-    document.querySelectorAll('.bottom-menu a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const type = this.getAttribute('data-type'); // Get the data-type value
-            
-            // Update the details section with the corresponding content
-            if (detailsData[type]) {
-                detailsContent.textContent = detailsData[type].content;
-                detailsLink.textContent = detailsData[type].link;
+                    // Clear existing dynamic boxes
+                    clearDynamicBoxes();
+
+                    // Add new dynamic boxes
+                    detailsData[type].boxes.forEach(box => {
+                        createDynamicBox(box.title, box.content, box.type);
+                    });
+                }
+            });
+        });
+
+        // Set default content for the 'posts' section
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultSection = 'posts'; // Default section to be displayed
+
+            if (detailsData[defaultSection]) {
+                detailsContent.textContent = detailsData[defaultSection].content;
+                detailsLink.textContent = detailsData[defaultSection].link;
 
                 // Clear existing dynamic boxes
                 clearDynamicBoxes();
 
-                // Add new dynamic boxes
-                detailsData[type].boxes.forEach(box => {
-                    createDynamicBox(box.title, box.content);
+                // Add new dynamic boxes for the default section
+                detailsData[defaultSection].boxes.forEach(box => {
+                    createDynamicBox(box.title, box.content, box.type);
                 });
             }
         });
-    });
-
-
-
-</script>
+    </script>
 
 </body>
 </html>
