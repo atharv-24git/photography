@@ -487,10 +487,328 @@ h4 {
 
 
 
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section and Header Styling */
+        .section h2 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 0px solid #6c63ff;
+            padding-bottom: 0px;
+        }
+
+        /* Card Styling */
+        .card {
+            border-left: 5px solid #ffccf0;
+            border-right: 5px solid transparent;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .card:hover {
+            border-left-color: #ffccfc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card Content Styling */
+        .card p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff, #f9f9f9, #e0eaff);
+            border-left: 4px solid #ffccfc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card p:hover {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff, #d9cde1);
+            border-left-color: #b984b5;
+            color: #333;
+        }
+.section .card h3 {
+    font-family: 'Pacifico', cursive; /* Default Pacifico font */
+    color: #2c3e50;
+    font-size: 2.6em; /* Slightly smaller heading */
+    margin-bottom: 0px;
+    margin-top: -5px; /* Moves the heading slightly upward */
+    font-weight: 600;
+}
+        /* Read More Functionality */
+        .more-content {
+            display: none;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .read-more, .read-less {
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-more:hover, .read-less:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+
+/* Container for Falling Emojis */
+.falling-emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures the container does not interfere with other elements */
+    overflow: hidden; /* Hides any overflowed emojis */
+    z-index: -1; /* Ensures the container stays behind other content */
+}
+
+/* Falling Emoji Animation */
+@keyframes fallEmojis {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.falling-emoji {
+    position: absolute;
+    font-size: 2em;
+    animation: fallEmojis 10s linear infinite;
+    pointer-events: none; /* Prevents clicking or interaction with the falling emojis */
+}
+
+/* Define multiple emojis falling with different start positions */
+.emoji1 {
+    left: 5%;
+    animation-duration: 12s;
+}
+
+.emoji2 {
+    left: 15%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.emoji3 {
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.emoji4 {
+    left: 40%;
+    animation-duration: 13s;
+    animation-delay: 0s;
+}
+
+.emoji5 {
+    left: 45%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.emoji6 {
+    left: 55%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+
+.emoji7 {
+    left: 65%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.emoji8 {
+    left: 75%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.emoji9 {
+    left: 85%;
+    animation-duration: 16s;
+    animation-delay: 0s;
+}
+
+.emoji10 {
+    left: 90%;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+
+
+        /* Animation for Falling Flowers and Petals */
+        @keyframes fallFlowers {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes flower1 {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100%) rotate(360deg);
+            }
+        }
+
+        @keyframes flower2 {
+            0% {
+                transform: translateY(-100%) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100%) rotate(-360deg);
+            }
+        }
+
+        .supercharge {
+            position: relative;
+            background-color: #ffccfc; /* Light background for visual effect */
+            overflow: hidden;
+        }
+
+        .supercharge::before,
+        .supercharge::after {
+            content: "🍁";
+            position: absolute;
+            font-size: 2em;
+            animation: fallFlowers 10s linear infinite;
+        }
+
+        .supercharge .flower1 {
+            content: "🌷";
+            top: -10%;
+            left: 10%;
+            animation: flower1 8s linear infinite;
+        }
+
+        .supercharge .flower2 {
+            content: "🌹";
+            top: -20%;
+            right: 20%;
+            animation: flower2 12s linear infinite;
+        }
+
+        .supercharge .flower3 {
+            content: "🌼";
+            top: -30%;
+            left: 30%;
+            animation: flower1 15s linear infinite;
+        }
+
+        /* Add more flower styles as needed */
+        .supercharge .flower4 {
+            content: "🌸";
+            top: -40%;
+            right: 40%;
+            animation: flower2 20s linear infinite;
+        }
+
+        /* Highlighted Text */
+        .highlight {
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        /* Text with Border */
+        .bordered {
+            border: 2px solid #007bff;
+            padding: 2px 6px;
+            border-radius: 20px;
+            background: #f1f8ff;
+            color: #007bff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+        }
+
+        /* Bold Text */
+        .bold {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Bullet List */
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 5px;
+        }
+
+        /* Media Queries for Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .section h2 {
+                font-size: 1.8em;
+            }
+            .card {
+                padding: 8px;
+                margin-bottom: 15px;
+            }
+            .card p {
+                font-size: 0.9em;
+                padding: 12px;
+            }
+        }
+         header {
+            background: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+
+
   </style>
 </head>
 <body>
-
 <div class="container">
     <!-- Cover Photo -->
     <div class="cover-photo">
@@ -545,6 +863,96 @@ h4 {
     </div>
     <div id="about-section" style="display:none;">
         <h3>About</h3>
+
+
+
+
+
+
+<section id="i-lear" class="section">
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Cultivation Techniques</h3>
+        <p>Learn about innovative techniques for growing beautiful flowers in various environments. From hydroponics to vertical gardens, discover methods that enhance flower growth and health. 🌼🌱</p>
+        <div class="more-content">
+            <p>Explore various cultivation techniques including soil preparation, watering practices, and nutrient management. Understand how different techniques can impact flower yield and quality, and get tips for optimizing your flower garden's success.</p>
+        </div>
+    </div>
+    
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Varieties and Care</h3>
+        <p>Dive into the world of diverse flower species and their specific care requirements. Discover the best practices for nurturing different types of flowers and ensuring their vibrant growth. 🌸🌿</p>
+        <div class="more-content">
+            <p>Learn about the characteristics of popular flower varieties, including their light, water, and soil needs. This resource provides detailed care instructions and tips for maintaining healthy, thriving flowers throughout their lifecycle.</p>
+        </div>
+    </div>
+    
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Pest and Disease Management</h3>
+        <p>Understand how to identify and manage common pests and diseases that affect flowers. Learn strategies to protect your plants and maintain their health and beauty. 🌺🔍</p>
+        <div class="more-content">
+            <p>Explore methods for detecting and controlling pests and diseases, including organic and chemical treatments. This resource offers guidance on preventing infestations and managing issues effectively to keep your flower garden flourishing.</p>
+        </div>
+    </div>
+    
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Seasonal Flower Planting</h3>
+        <p>Discover the best flowers to plant in different seasons and how to time your planting for optimal blooms. Learn about seasonal care practices and how to adjust your garden throughout the year. 🌷🍂</p>
+        <div class="more-content">
+            <p>Find out which flowers thrive in each season and how to plan your planting schedule. This resource includes tips on preparing your garden for different weather conditions and ensuring continuous flower blooms throughout the year.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>DIY Flower Arrangements</h3>
+        <p>Get creative with your flower displays by learning how to create beautiful and unique arrangements. Discover techniques for arranging flowers for various occasions and settings. 💐🎨</p>
+        <div class="more-content">
+            <p>Learn about different arrangement styles, tools, and techniques to make your flower displays stand out. This resource provides step-by-step guides and inspiration for creating stunning floral arrangements for any event or decor.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Soil and Fertilization</h3>
+        <p>Understand the importance of soil quality and fertilization for growing healthy flowers. Learn about different soil types and the best fertilizers to use for optimal flower growth. 🌿🌼</p>
+        <div class="more-content">
+            <p>Explore soil amendments, pH levels, and nutrient requirements for various flower types. This resource offers advice on choosing the right fertilizers and maintaining soil health to support robust and vibrant flower growth.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Propagation Methods</h3>
+        <p>Learn how to propagate flowers through various methods such as seeds, cuttings, and grafting. Discover techniques to expand your garden or share your favorite flowers with others. 🌺✂️</p>
+        <div class="more-content">
+            <p>Get detailed instructions on different propagation techniques, including how to successfully grow new plants from existing ones. This resource includes tips for improving success rates and growing a variety of flowers from different propagation methods.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+        <h3>Flower Garden Design</h3>
+        <p>Transform your outdoor space with creative flower garden designs. Learn how to plan and layout your garden for visual appeal and seasonal interest. 🌷🏡</p>
+        <div class="more-content">
+            <p>Explore design principles, including color schemes, plant combinations, and garden layouts. This resource offers inspiration and practical advice for creating a flower garden that enhances your outdoor space and suits your aesthetic preferences.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Falling Emojis -->
+<!-- Updated Falling Emojis -->
+<div class="falling-emoji-container">
+    <span class="falling-emoji emoji1">🍂</span>
+    <span class="falling-emoji emoji2">🌸</span>
+    <span class="falling-emoji emoji3">🍀</span>
+    <span class="falling-emoji emoji4">🌼</span>
+    <span class="falling-emoji emoji5">🌿</span>
+    <span class="falling-emoji emoji6">🌻</span>
+    <span class="falling-emoji emoji7">🍃</span>
+    <span class="falling-emoji emoji8">🍁</span>
+    <span class="falling-emoji emoji9">🌺</span>
+    <span class="falling-emoji emoji10">🌱</span>
+</div>
+
+
         <p>Atharv Siddhu is a passionate individual with interests in technology, art, and travel. Always eager to learn and share experiences.</p>
         <h4>Interests:</h4>
         <ul>
@@ -565,7 +973,17 @@ h4 {
     </div>
     <div id="more-section" style="display:none;">
         <h3>More</h3>
-        <p>Additional information and links:</p>
+ <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="book-collection.html">E-Book</a> 
+        <a href="index-second.html">CR-lection</a>
+        <a href="i-lear.html">PR-Per</a> 
+        <a href="research-papers.html">R-search</a>
+        <a href="online-resources.html">Online Resources</a>
+    </nav>
+</header>
+       <p>Additional information and links:</p>
         <ul>
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
@@ -637,40 +1055,91 @@ h4 {
             text.classList.toggle('hidden'); // Toggle visibility of the text
         }
 
-        // Example of adding new posts
-        createPost(
-            'facebookpfl/profile/yourimagehead18092024.jpg',
-            'Iicechawan',
-            'is feeling tired in brazil. 😴',
-            'Where is the tired mind... 🍁🌹🖤',
-            'facebookpfl/everyone/seeyourimageback230920241.jpg', 
-            'Gorgeous ❤️❤️🔥'
-        );
+// Example of adding new posts
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Iicechawan',
+    'is feeling tired in Gelonek. 😴',
+    'Where is the tired mind... 🍁🌹🖤',
+    'facebookpfl/everyone/seeyourimageback230920241.jpg', 
+    'Gorgeous ❤️❤️🔥'
+);
 
-        // Add more posts with different hidden texts
-        createPost(
-            'facebookpfl/profile/yourimagehead18092024.jpg',
-            'Sorang',
-            'is enjoying the day! ☀️',
-            'Life is beautiful! 🌼',
-            'facebookpfl/everyone/seeyourimageback230920242.jpg', 
-            'The sun shines brighter with you! ☀️✨'
-        );
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Sorang',
+    'is enjoying the day! ☀️',
+    'Life is beautiful! 🌼',
+    'facebookpfl/everyone/seeyourimageback230920242.jpg', 
+    'The sun shines brighter with you! ☀️✨'
+);
 
-        createPost(
-            'facebookpfl/profile/yourimagehead18092024.jpg',
-            'Iicechawan',
-            'is feeling creative! 🎨',
-            'Let’s make something great! 🚀',
-            'facebookpfl/everyone/seeyourimageback230920243.jpg', 
-            'Art is the beauty of the heart! 🎨❤️'
-        );
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Iicechawan',
+    'is feeling creative! 🎨',
+    'Let’s make something great! 🚀',
+    'facebookpfl/everyone/seeyourimageback230920243.jpg', 
+    'Art is the beauty of the heart! 🎨❤️'
+);
 
-        // Show posts section by default
-        showSection('posts');
+// Post D - Lynette
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Lynette',
+    'is on a coffee break ☕️',
+    'Taking a moment to recharge... ☕️💭',
+    'facebookpfl/everyone/seeyourimageback240920244.jpg', 
+    'Nothing beats a good cup of coffee! ☕️💖'
+);
+
+// Post E - Jake (you might want to replace this if focusing only on girls)
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Iicechawan',
+    'is hitting the gym 💪',
+    'Push harder, go farther! 🏋️‍♂️',
+    'facebookpfl/everyone/seeyourimageback240920245.jpg', 
+    'Strength is built in moments of struggle! 💪🔥'
+);
+
+// Post F - Nina
+createPost(
+    'facebookpfl/profile/yourimagehead18092024.jpg',
+    'Nina',
+    'is feeling adventurous! 🌍',
+    'Exploring new horizons... 🗺️✈️',
+    'facebookpfl/everyone/seeyourimageback240920246.jpg', 
+    'The world is full of wonders! 🌍✨'
+);
+
+// Show posts section by default
+showSection('posts');
+
+
+
+
+    function toggleContent(card) {
+        const moreContent = card.querySelector('.more-content');
+        const superchargeClass = 'supercharge';
+
+        if (moreContent.style.display === "block") {
+            moreContent.style.display = "none";
+            moreContent.classList.remove(superchargeClass);
+        } else {
+            moreContent.style.display = "block";
+            moreContent.classList.add(superchargeClass);
+        }
+    }
+
+
+
     </script>
 
 </div>
 
+
 </body>
 </html>
+
+
