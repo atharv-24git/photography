@@ -47,9 +47,9 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            font-size: 20px;
+            font-size: 18px;
             color: black;
-            background-color: #ffffff;
+            background-color: #FFF0F5;
             padding: 10px;
             border-radius: 50%;
             cursor: pointer; /* Change cursor to pointer */
@@ -118,27 +118,26 @@
             margin-top: 15px;
         }
 
-        .btn {
-            padding: 10px 35px;
-            font-size: 14px;
-            color: white;
-            background-color: #000FFF;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.btn {
+    padding: 13px 60px;
+    font-size: 12px;
+    color: white;
+    background-color: #000FFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .btn:hover {
-            background-color: #218838;
-        }
-
+.btn:hover {
+    background-color: #218838;
+}
 
 .follow-button {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 18px;
     font-size: 14px;
     color: white;
     background-color: #000FFF;
@@ -190,7 +189,7 @@
     padding: 10px 30px; /* Adjust padding for consistency */
     font-size: 14px;
     color: white;
-    margin-right: 10px;
+    margin-right: 8px;
     background-color: #000FFF; /* Different color for New Box */
 }
 
@@ -395,7 +394,100 @@
     color: #e65100; /* Darker orange text on hover */
 }
 
-    </style>
+ 
+
+
+        .header {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 60px; /* Larger image for clearer view */
+            height: 60px;
+            object-fit: cover; /* Ensures it fits well */
+            margin-right: 15px;
+        }
+        .username {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .status {
+            color: #555;
+        }
+        .post-content {
+            padding: 0px;
+        }
+        .post-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #212121;
+        }
+        .post-image {
+            overflow: hidden; /* Hide overflow for scaling effect */
+            transition: transform 0.2s; /* Smooth hover effect */
+        }
+        .post-image:hover {
+            transform: scale(1.02); /* Zoom effect on hover */
+        }
+        .post-image img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none; /* Hide the element */
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.bottom-menu a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+h3 {
+    margin-left: 20px;
+    color: #4A90E2; /* Change to your desired color */
+    font-family: 'Arial', sans-serif; /* Choose a font that feels premium */
+    font-weight: bold; /* Makes it stand out */
+}
+
+p {
+    margin-left: 20px;
+    color: #555; /* A softer color for the paragraph */
+
+    line-height: 1.6; /* Better spacing for readability */
+}
+
+h4 {
+    margin-left: 20px;
+    color: #E94E77; /* Change to your desired color */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+  </style>
 </head>
 <body>
 
@@ -403,7 +495,7 @@
     <!-- Cover Photo -->
     <div class="cover-photo">
         <div class="profile-photo"></div>
-        <span class="camera-icon" onclick="toggleSidebar()">📷</span>
+        <span class="camera-icon" onclick="toggleSidebar()">🌿</span>
     </div>
 
     <!-- Profile Info -->
@@ -421,10 +513,6 @@
     <div class="buttons">
         <button class="btn">See Dashboard</button>
         <a href="https://www.instagram.com/___atharv_ava_?igsh=ZXBib2x3bmtranVx" target="_blank" class="follow-button">
-            <!-- Instagram SVG Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.307.975.976 1.245 2.242 1.307 3.608.058 1.266.069 1.646.069 4.852 0 3.204-.011 3.584-.069 4.85-.062 1.366-.332 2.633-1.307 3.608-.976.975-2.242 1.245-3.608 1.307-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.366-.062-2.633-.332-3.608-1.307-.975-.976-1.245-2.242-1.307-3.608-.058-1.266-.069-1.646-.069-4.85s.011-3.584.069-4.85c.062-1.366.332-2.633 1.307-3.608.976-.975 2.242-1.245 3.608-1.307 1.266-.058 1.646-.069 4.85-.069m0-2.163c-3.259 0-3.667.013-4.947.072-1.281.058-2.563.337-3.537 1.312-.975.974-1.255 2.256-1.313 3.537-.059 1.28-.072 1.688-.072 4.947 0 3.259.013 3.667.072 4.947.058 1.281.337 2.563 1.313 3.537.974.975 2.256 1.255 3.537 1.313 1.28.059 1.688.072 4.947.072 3.259 0 3.667-.013 4.947-.072 1.281-.058 2.563-.337 3.537-1.313.975-.974 1.255-2.256 1.313-3.537.059-1.28.072-1.688.072-4.947 0-3.259-.013-3.667-.072-4.947-.058-1.281-.337-2.563-1.313-3.537-.974-.975-2.256-1.255-3.537-1.313-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.397 0-6.162 2.765-6.162 6.162s2.765 6.162 6.162 6.162 6.162-2.765 6.162-6.162-2.765-6.162-6.162-6.162zm0 10.275c-2.27 0-4.113-1.843-4.113-4.113s1.843-4.113 4.113-4.113 4.113 1.843 4.113 4.113-1.843 4.113-4.113 4.113zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
-            </svg>
             Follow on Insta
         </a>
     </div>
@@ -433,40 +521,56 @@
     <div class="buttons-wrapper">
         <!-- Advertise Section -->
         <div class="advertise">
-            <button>Advertise</button>
+            <button onclick="alert('Advertise functionality will go here!')">Advertise</button>
         </div>
 
         <!-- New Small Box Section -->
         <div class="small-box">
-            <button> ••• </button>
+            <button onclick="alert('Small box functionality will go here!')"> ••• </button>
         </div>
     </div>
 
     <!-- Bottom Menu -->
     <div class="bottom-menu">
-        <a href="#" data-type="posts">Posts</a>
-        <a href="#" data-type="about">About</a>
-        <a href="#" data-type="photos">Photos</a>
-        <a href="#" data-type="more">More</a>
+        <a href="#" data-type="posts" onclick="showSection('posts')">Posts</a>
+        <a href="#" data-type="about" onclick="showSection('about')">About</a>
+        <a href="#" data-type="photos" onclick="showSection('photos')">Photos</a>
+        <a href="#" data-type="more" onclick="showSection('more')">More</a>
     </div>
 
-    <!-- Details Section -->
-    <div class="details" id="details-section">
-        <h3>Details</h3>
-        <p id="details-content">Recent Posts and Updates</p>
-        <p><a href="#" style="text-decoration: none;" id="details-link">View all posts</a></p>
+    <!-- Sections -->
+    <div id="posts-section">
+        <h3>Recent Posts</h3>
+        <div id="posts-container"></div>
     </div>
-
-    <!-- Dynamic Boxes Section -->
-    <div id="dynamic-boxes">
-        <div class="dynamic-box">
-            <h4>Latest Post</h4>
-            <p>Check out the latest post about technology.</p>
+    <div id="about-section" style="display:none;">
+        <h3>About</h3>
+        <p>Atharv Siddhu is a passionate individual with interests in technology, art, and travel. Always eager to learn and share experiences.</p>
+        <h4>Interests:</h4>
+        <ul>
+            <li>Technology</li>
+            <li>Photography</li>
+            <li>Travel</li>
+            <li>Music</li>
+        </ul>
+    </div>
+    <div id="photos-section" style="display:none;">
+        <h3>Photos</h3>
+        <p>Gallery of memories:</p>
+        <div id="photo-gallery">
+            <img src="path/to/photo1.jpg" alt="Photo 1" style="width:100px; height:auto;">
+            <img src="path/to/photo2.jpg" alt="Photo 2" style="width:100px; height:auto;">
+            <img src="path/to/photo3.jpg" alt="Photo 3" style="width:100px; height:auto;">
         </div>
-        <div class="dynamic-box">
-            <h4>Top Stories</h4>
-            <p>Explore trending stories this week.</p>
-        </div>
+    </div>
+    <div id="more-section" style="display:none;">
+        <h3>More</h3>
+        <p>Additional information and links:</p>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
     </div>
 
     <!-- Sidebar Overlay -->
@@ -477,11 +581,10 @@
         <span class="close-btn" onclick="toggleSidebar()">✖</span>
         <h2>Sidebar</h2>
         <a href="index.html">Home</a>
-        <a href="index1.html">Homie</a>
+        <a href="indexHomie.html">Update too</a>
         <a href="#">Option 3</a>
         <a href="#">Option 4</a>
     </div>
-
 
     <script>
         function toggleSidebar() {
@@ -496,114 +599,78 @@
             }
         }
 
-        const detailsSection = document.getElementById('details-section');
-        const detailsContent = document.getElementById('details-content');
-        const detailsLink = document.getElementById('details-link');
-        const dynamicBoxesContainer = document.getElementById('dynamic-boxes'); // Container for dynamic boxes
+        function showSection(section) {
+            // Hide all sections
+            document.getElementById('posts-section').style.display = 'none';
+            document.getElementById('about-section').style.display = 'none';
+            document.getElementById('photos-section').style.display = 'none';
+            document.getElementById('more-section').style.display = 'none';
 
-        // Data to be displayed for each section
-        const detailsData = {
-            posts: {
-                content: 'Recent Posts and Updates',
-                link: 'View all posts',
-boxes: [
-    { title: 'Latest Post', content: 'Discover the newest trends in technology.', type: 'latest-post' },
-    { title: 'Tech Insights', content: 'Dive into our latest analysis on cutting-edge tech.', type: 'latest-post' },
-    { title: 'Top Stories', content: 'Catch up on the most talked-about stories of the week.', type: 'latest-post' }
-]
-            },
-            about: {
-                content: 'Learn more about Atharv Siddhu',
-                link: 'See your About info',
-                boxes: [
-                    { title: 'Biography', content: 'Atharv is a passionate digital creator.', type: 'biography' },
-                    { title: 'Achievements', content: 'Multiple awards for innovative designs.', type: 'biography' }
-                ]
-            },
-            photos: {
-                content: 'Check out the latest photos',
-link: 'View all photos',
-boxes: [
-    { title: 'Sunset Escapes', content: 'Mesmerizing sunsets captured from around the world.', type: 'photos' },
-    { title: 'Wildlife Wonders', content: 'Incredible moments with wildlife in their natural habitat.', type: 'photos' },
-    { title: 'City Lights', content: 'Vibrant cityscapes and nightlife photography.', type: 'photos' },
-    { title: 'Seasonal Splendor', content: 'Beautiful scenes showcasing the changing seasons.', type: 'photos' }
-]
-            },
-            more: {
-                content: 'Explore more options and features',
-                link: 'Discover more',
-                boxes: [
-                    { title: 'Future Plans', content: 'Upcoming projects and collaborations.', type: 'future-plans' },
-                    { title: 'Feedback', content: 'Share your thoughts and suggestions.', type: 'future-plans' }
-                ]
-            }
-        };
-
-        // Function to clear dynamic boxes
-        function clearDynamicBoxes() {
-            dynamicBoxesContainer.innerHTML = ''; // Clear the current content
+            // Show the selected section
+            document.getElementById(section + '-section').style.display = 'block';
         }
 
-        // Function to create a new dynamic box
-        function createDynamicBox(title, content, type) {
-            const box = document.createElement('div');
-            box.className = `dynamic-box ${type}`; // Add the type-specific class
-            box.style.borderRadius = '8px';
-
-            const boxTitle = document.createElement('h4');
-            boxTitle.textContent = title;
-            boxTitle.style.marginBottom = '5px';
-
-            const boxContent = document.createElement('p');
-            boxContent.textContent = content;
-
-            box.appendChild(boxTitle);
-            box.appendChild(boxContent);
-
-            dynamicBoxesContainer.appendChild(box);
+        function createPost(profilePic, username, status, postText, postImage, hiddenText) {
+            const postHTML = `
+                <div class="container">
+                    <div class="header">
+                        <img src="${profilePic}" alt="Profile Picture of ${username}" class="profile-pic">
+                        <div>
+                            <span class="username">${username}</span><br>
+                            <span class="status">${status}</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">${postText}</p>
+                        <div class="post-image" onclick="toggleText(this)">
+                            <img src="${postImage}" alt="Post Image">
+                        </div>
+                        <p class="post-text hidden">${hiddenText}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('posts-container').insertAdjacentHTML('beforeend', postHTML);
         }
 
-        // Add event listeners to the bottom menu links
-        document.querySelectorAll('.bottom-menu a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                const type = this.getAttribute('data-type'); // Get the data-type value
-                
-                // Update the details section with the corresponding content
-                if (detailsData[type]) {
-                    detailsContent.textContent = detailsData[type].content;
-                    detailsLink.textContent = detailsData[type].link;
+        function toggleText(element) {
+            const text = element.nextElementSibling;
+            text.classList.toggle('hidden'); // Toggle visibility of the text
+        }
 
-                    // Clear existing dynamic boxes
-                    clearDynamicBoxes();
+        // Example of adding new posts
+        createPost(
+            'facebookpfl/profile/yourimagehead18092024.jpg',
+            'Iicechawan',
+            'is feeling tired in brazil. 😴',
+            'Where is the tired mind... 🍁🌹🖤',
+            'facebookpfl/everyone/seeyourimageback230920241.jpg', 
+            'Gorgeous ❤️❤️🔥'
+        );
 
-                    // Add new dynamic boxes
-                    detailsData[type].boxes.forEach(box => {
-                        createDynamicBox(box.title, box.content, box.type);
-                    });
-                }
-            });
-        });
+        // Add more posts with different hidden texts
+        createPost(
+            'facebookpfl/profile/yourimagehead18092024.jpg',
+            'Sorang',
+            'is enjoying the day! ☀️',
+            'Life is beautiful! 🌼',
+            'facebookpfl/everyone/seeyourimageback230920242.jpg', 
+            'The sun shines brighter with you! ☀️✨'
+        );
 
-        // Set default content for the 'posts' section
-        document.addEventListener('DOMContentLoaded', function() {
-            const defaultSection = 'posts'; // Default section to be displayed
+        createPost(
+            'facebookpfl/profile/yourimagehead18092024.jpg',
+            'Iicechawan',
+            'is feeling creative! 🎨',
+            'Let’s make something great! 🚀',
+            'facebookpfl/everyone/seeyourimageback230920243.jpg', 
+            'Art is the beauty of the heart! 🎨❤️'
+        );
 
-            if (detailsData[defaultSection]) {
-                detailsContent.textContent = detailsData[defaultSection].content;
-                detailsLink.textContent = detailsData[defaultSection].link;
-
-                // Clear existing dynamic boxes
-                clearDynamicBoxes();
-
-                // Add new dynamic boxes for the default section
-                detailsData[defaultSection].boxes.forEach(box => {
-                    createDynamicBox(box.title, box.content, box.type);
-                });
-            }
-        });
+        // Show posts section by default
+        showSection('posts');
     </script>
+
+</div>
 
 </body>
 </html>
