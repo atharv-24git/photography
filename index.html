@@ -806,6 +806,59 @@ h4 {
 
 
 
+
+
+        .gallery {
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .image-container {
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background-color: #ffffff; /* White background for contrast */
+        }
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 12px;
+            object-fit: cover; /* Ensure images cover the container */
+            transition: filter 0.3s ease;
+        }
+        .image-container img:hover {
+            filter: brightness(0.8);
+        }
+        .full-screen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .full-screen-overlay img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+
+
+
   </style>
 </head>
 <body>
@@ -966,9 +1019,15 @@ h4 {
         <h3>Photos</h3>
         <p>Gallery of memories:</p>
         <div id="photo-gallery">
-            <img src="path/to/photo1.jpg" alt="Photo 1" style="width:100px; height:auto;">
-            <img src="path/to/photo2.jpg" alt="Photo 2" style="width:100px; height:auto;">
-            <img src="path/to/photo3.jpg" alt="Photo 3" style="width:100px; height:auto;">
+
+    <div class="gallery" id="gallery"></div>
+    <div class="full-screen-overlay" id="fullScreenOverlay">
+        <img src="" alt="Full Screen Image" id="fullScreenImage">
+    </div>
+
+            <img src="facebookpfl/everyone/seeyourimageback230920241.jpg" alt="Photo 1" style="width:100px; height:auto;">
+            <img src="facebookpfl/everyone/seeyourimageback240920245.jpg" alt="Photo 2" style="width:100px; height:auto;">
+            <img src="facebookpfl/everyone/seeyourimageback240920246.jpg" alt="Photo 3" style="width:100px; height:auto;">
         </div>
     </div>
     <div id="more-section" style="display:none;">
@@ -1134,12 +1193,64 @@ showSection('posts');
 
 
 
+
+
+
+        // Array of image URLs (local and online)
+const imageUrls = [
+    'facebookpfl/lockfolder/your-image1.jpg', // Local image 1
+    'facebookpfl/lockfolder/your-image2.jpg', // Local image 2
+    'facebookpfl/lockfolder/your-image3.jpg', // Local image 3
+    'facebookpfl/lockfolder/your-image4.jpg', // Local image 4
+    'facebookpfl/lockfolder/your-image5.jpg', // Local image 5
+    'facebookpfl/lockfolder/your-image6.jpg', // Local image 6
+    'facebookpfl/lockfolder/your-image7.jpg', // Local image 7
+    'facebookpfl/lockfolder/your-image8.jpg', // Local image 8
+    'facebookpfl/lockfolder/your-image9.jpg', // Local image 9
+    'facebookpfl/lockfolder/your-image10.jpg', // Local image 10
+    'facebookpfl/lockfolder/your-image11.jpg', // Local image 11
+    'facebookpfl/lockfolder/your-image12.jpg', // Local image 12
+    'facebookpfl/lockfolder/your-image13.jpg', // Local image 13
+    'facebookpfl/lockfolder/your-image14.jpg', // Local image 14
+    'facebookpfl/lockfolder/your-image15.jpg', // Local image 15
+    'facebookpfl/lockfolder/your-image16.jpg', // Local image 16
+    'facebookpfl/lockfolder/your-image17.jpg', // Local image 17
+
+];
+
+        // Get the gallery and overlay elements
+        const gallery = document.getElementById('gallery');
+        const fullScreenOverlay = document.getElementById('fullScreenOverlay');
+        const fullScreenImage = document.getElementById('fullScreenImage');
+
+        // Function to create the gallery
+        function createGallery() {
+            imageUrls.forEach(url => {
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('image-container');
+
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = 'Gallery Image';
+
+                // Add click event to show image in fullscreen
+                imageContainer.addEventListener('click', () => {
+                    fullScreenImage.src = url;
+                    fullScreenOverlay.style.display = 'flex';
+                });
+
+                imageContainer.appendChild(img);
+                gallery.appendChild(imageContainer);
+            });
+        }
+
+        // Close fullscreen overlay when clicked
+        fullScreenOverlay.addEventListener('click', () => {
+            fullScreenOverlay.style.display = 'none';
+        });
+
+        // Initialize the gallery
+        createGallery();
     </script>
-
-</div>
-
-
 </body>
 </html>
-
-
